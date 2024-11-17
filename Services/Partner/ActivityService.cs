@@ -752,6 +752,7 @@ namespace BMS_API.Services.Partner
             }
         }
         #endregion GET-ALL Follower
+
         #region getActivityById
         public async Task<ActivityListDTO> GetActivityById(long activityId)
         {
