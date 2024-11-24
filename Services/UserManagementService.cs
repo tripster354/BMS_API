@@ -22,6 +22,8 @@ namespace BMS_API.Services
         {
         }
 
+
+        //IUserManagementService
         public AuthorisedUser ObjUser { get; set; }
 
 
