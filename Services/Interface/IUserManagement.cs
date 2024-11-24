@@ -25,5 +25,6 @@ namespace BMS_API.Services.Interface
         Task<VendorLoginResponse> LoginWithMobileOTP(string mobileNumber, int otp);
         Task<List<ActivityInterestDTO>> GetAllInterestActivityNames();
         Task<ModelUserManagementDTO> GetVendorById(long userId);
+        Task<int> SendOtponMobile(string loginInput);
     }
 }

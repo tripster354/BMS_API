@@ -415,6 +415,32 @@ namespace BudgetManagement.Controllers
         }
         #endregion UPDATES-MYNOTIFICATION
 
+
+
+        [HttpPost]
+        [Route("VenderSendOtp")]
+        public async Task<IActionResult> VenderSendOtp([FromForm] VendorSendOtpRequest request)
+        {
+
+            try
+            {
+                var result = await _UserManagementService.SendOtponMobile(request.MobileNumber);
+                if (result == 0)
+                {
+                    return BadRequest(new { status = 201, data = new object[] { }, message = "can't Proceed" });
+                }
+
+                return Ok(new { status = 200,  Message = "Send Successfully " });
+            }
+            catch (Exception e)
+            {
+                return BadRequest(new { status = 201, data = new object[] { }, message = msgError });
+            }
+        }
+
+        
+
+
         [HttpPost]
         [Route("vendor-login")]
         public async Task<IActionResult> LoginWithMobileOTP([FromForm] VendorLoginRequest request)

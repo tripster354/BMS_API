@@ -582,6 +582,56 @@ namespace BMS_API.Services
         }
 
 
+
+        public async Task<int> SendOtponMobile(string loginInput)
+        {
+            using (var command = _context.Database.GetDbConnection().CreateCommand())
+            {
+                command.CommandText = "UpdateOtpOnMobile"; // Your stored procedure
+                command.CommandType = System.Data.CommandType.StoredProcedure;
+
+                // Set up parameters
+                command.Parameters.Add(new SqlParameter("@LoginInput", loginInput));
+                command.Parameters.Add(new SqlParameter("@OTP", 1234));
+
+                await _context.Database.OpenConnectionAsync();
+
+                DbDataReader ddr = await command.ExecuteReaderAsync();
+                DataTable dt = new DataTable();
+                dt.Load(ddr);
+
+                // Check if the result contains the "Status" column
+                if (dt.Columns.Contains("Msg") && Convert.ToInt32(dt.Rows[0]["Msg"]) == 1)
+                {
+                    // Handle case when user is not found
+                    return 1; // Or return some error object/message if preferred
+                }
+
+                //// If columns exist, return the user data
+                //if (dt.Rows.Count > 0 && dt.Columns.Contains("Msg"))
+                //{
+                //    return new VendorLoginResponse
+                //    {
+                //        UserID = dt.Rows[0]["UserID"] != DBNull.Value ? Convert.ToInt64(dt.Rows[0]["UserID"]) : 0,
+                //        FullName = dt.Rows[0]["FullName"]?.ToString() ?? "Unknown",
+                //        Email = dt.Rows[0]["Email"]?.ToString() ?? "Unknown",
+                //        MobileNumber = dt.Rows[0]["MobileNumber"]?.ToString() ?? "Unknown",
+                //        InstaLink = dt.Rows[0]["InstaLink"]?.ToString() ?? "Unknown",
+                //        TwitterLink = dt.Rows[0]["TwitterLink"]?.ToString() ?? "Unknown",
+                //        LinkedInLink = dt.Rows[0]["LinkedInLink"]?.ToString() ?? "Unknown",
+                //        Website = dt.Rows[0]["WebSite"]?.ToString() ?? "Unknown",
+                //        ActivityInterestName = dt.Rows[0]["ActivityInterestName"]?.ToString() ?? "Unknown",
+                //        YearsOfExperience = dt.Rows[0]["YearsOfExperience"] != DBNull.Value ? Convert.ToInt32(dt.Rows[0]["YearsOfExperience"]) : 0,
+                //        UserType = (int)ICommon.UserType.Vendor, // Assuming you still want to set this but have no actual UserType in db
+                //        CurrentToken = dt.Rows[0]["GeneratedToken"]?.ToString() // Return the generated token
+                //    };
+                //}
+
+                return 0; // User not found or login failed
+            }
+        }
+
+
         #endregion
 
         #region activityInterestNames
