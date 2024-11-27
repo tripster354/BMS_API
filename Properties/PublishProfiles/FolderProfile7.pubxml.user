@@ -5,7 +5,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project>
   <PropertyGroup>
     <_PublishTargetUrl>C:\Users\baps\Desktop\TestDeploy</_PublishTargetUrl>
-    <History>True|2024-11-24T09:07:10.2155488Z||;</History>
+    <History>True|2024-11-24T10:03:20.0953511Z||;True|2024-11-24T15:13:52.8925385+05:30||;True|2024-11-24T14:37:10.2155488+05:30||;</History>
     <LastFailureDetails />
   </PropertyGroup>
 </Project>

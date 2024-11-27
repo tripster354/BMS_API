@@ -23,7 +23,7 @@ namespace BMS_API.Services
         }
 
 
-        //IUserManagementService
+        //IUserManagementServiceSend
         public AuthorisedUser ObjUser { get; set; }
 
 
