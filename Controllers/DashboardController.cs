@@ -437,5 +437,39 @@ namespace BMS_API.Controllers
             }
         }
         #endregion
+
+        #region Get-User
+        [HttpGet]
+        [Route("Get-User")]
+        public async Task<IActionResult> GetUser()
+        {
+            /* GetAuth();//*
+            if (objUser == null) return BadRequest("User not found");
+            //_DashboardService.ObjUser = objUser;*/
+            try
+            {
+                var User = await _DashboardService.User_Get();
+                if (User == null || !User.Any())
+                {
+                    return NotFound("No User found");
+                }
+                return Ok(new
+                {
+                    status = 1,
+                    message = "User info retrived successfully",
+                    data = new
+                    {
+                        User,
+                    }
+                });
+            }
+            catch (Exception ex)
+            {
+
+            }
+
+            return View();
+        }
+        #endregion
     }
 }

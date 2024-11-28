@@ -11,6 +11,7 @@ namespace BMS_API.Services.Interface
     public interface IDashboardService : ICommon
     {
         Task<string> Dashboard_Detail();
+        Task<string> User_Get();
         Task<string> GetUpcomingActivities();
         //Task<object> GetAllTrendingSkills(Int64 skills);
         Task<object> GetAllTrendingSkillsAsync(Int64 activityStatus);

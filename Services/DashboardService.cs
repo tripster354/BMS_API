@@ -110,6 +110,8 @@ namespace BMS_API.Services
         {
             try
             {
+                string baseBannerUrl = "https://bookmyskills.co.in/Uploads/";
+
                 List<TrendingSkillsDTO> trendingSkills = new List<TrendingSkillsDTO>();
 
                 using (var command = _context.Database.GetDbConnection().CreateCommand())
@@ -133,7 +135,7 @@ namespace BMS_API.Services
                             var trendingSkill = new TrendingSkillsDTO
                             {
                                 SkillId = (int)(reader["ActivityIDP"] != DBNull.Value ? Convert.ToInt32(reader["ActivityIDP"]) : (int?)null),
-                                SkillImage = reader["SkillImage"].ToString(),
+                                SkillImage = reader["SkillImage"] != DBNull.Value ? baseBannerUrl + reader["SkillImage"].ToString() : string.Empty,
                                 SkillName = reader["SkillName"].ToString(),
                                 StartDateTime = reader["StartDateTime"].ToString(),
                                 Description = reader["Description"].ToString(),
@@ -156,6 +158,7 @@ namespace BMS_API.Services
                                 TotalClicks = ColumnExists(reader, "TotalClicks") ? (reader["TotalClicks"] != DBNull.Value ? Convert.ToInt32(reader["TotalClicks"]) : (int?)null) : null,
                                 TotalFavourites = ColumnExists(reader, "TotalFavourites") ? (reader["TotalFavourites"] != DBNull.Value ? Convert.ToInt32(reader["TotalFavourites"]) : (int?)null) : null,
                                 TrendRank = (int?)(ColumnExists(reader, "TrendRank") ? (reader["TrendRank"] != DBNull.Value ? Convert.ToDouble(reader["TrendRank"]) : (double?)null) : null)
+                                
                             };
 
                             trendingSkills.Add(trendingSkill);
@@ -278,6 +281,41 @@ namespace BMS_API.Services
             }
         }
         #endregion
+
+        #region get-User-info
+        public async Task<string> User_Get()
+        {
+            try
+            {
+                string strResponse = "";
+                using (var command = _context.Database.GetDbConnection().CreateCommand())
+                {
+                    command.CommandText = "uspGetUser";
+                    command.CommandType = System.Data.CommandType.StoredProcedure;
+                    command.Parameters.Add(new SqlParameter() { ParameterName = "@ID", SqlDbType = SqlDbType.BigInt, Value = ObjUser.UserID });
+
+                    _context.Database.OpenConnection();
+                    DbDataReader ddr = command.ExecuteReader();
+                    DataSet ds = new DataSet();
+                    while (!ddr.IsClosed)
+                        ds.Tables.Add().Load(ddr);
+                    ds.Tables[0].TableName = "activityData";
+                    ds.Tables[1].TableName = "trandingData";
+                    ds.Tables[2].TableName = "interestData";
+                    strResponse = Newtonsoft.Json.JsonConvert.SerializeObject(ds);
+
+                }
+                return strResponse;
+
+            }
+            catch (Exception e)
+            {
+                await ErrorLog(1, e.Message, $"uspUser_GetAll_ByUserIDF", 1);
+                return "Error, Something wrong!";
+            }
+        }
+        #endregion
+
 
         #region Dashboard-Get-Banners
         public async Task<List<BannerDTO>> GetBannersAsync()

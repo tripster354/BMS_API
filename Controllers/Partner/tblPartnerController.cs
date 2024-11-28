@@ -18,6 +18,9 @@ using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 using System.Data;
 using BMS_API.Models;
 using BMS_API.Services.Partner;
+using Microsoft.AspNetCore.Http;
+using System.Net.Http.Headers;
+using Microsoft.Extensions.Hosting;
 
 namespace BMS_API.Controllers.Partner
 {
@@ -28,19 +31,21 @@ namespace BMS_API.Controllers.Partner
     {
         private readonly ItblPartnerService _tblPartnerService;
         private readonly IWebHostEnvironment webHostEnvironment;
+        private readonly IWebHostEnvironment _hostEnvironment;
 
-        public tblPartnerController(BMSContext context, ItblPartnerService __tblPartnerService, IAuthService authService, IWebHostEnvironment webHostEnvironment) : base(context, authService)
+        public tblPartnerController(IWebHostEnvironment hostEnvironment, BMSContext context, ItblPartnerService __tblPartnerService, IAuthService authService, IWebHostEnvironment webHostEnvironment) : base(context, authService)
         {
             _context = context;
             _tblPartnerService = __tblPartnerService;
             this.webHostEnvironment = webHostEnvironment;
+            _hostEnvironment = hostEnvironment;
         }
 
 
         #region Registration
         [HttpPost]
         [Route("tblpartner-registration")]
-        public async Task<IActionResult> tblPartner_Registration([FromForm] tblPartner modeltblPartner)
+        public async Task<IActionResult> tblPartner_Registration([FromForm] tblPartnerRequest Partner)
         {
             try
             {
@@ -50,6 +55,52 @@ namespace BMS_API.Controllers.Partner
 
                 string directoryPath = "";
                 string tempDirectoryPath = "";
+                string UploadedfileName = null;
+                foreach (IFormFile source in Partner.ProfileImage)
+                {
+                    // Get original file name to get the extension from it.
+                    string orgFileName = ContentDispositionHeaderValue.Parse(source.ContentDisposition).FileName;
+
+                    // Create a new file name to avoid existing files on the server with the same names.
+                    // fileName = DateTime.Now.ToFileTime() + Path.GetExtension(orgFileName);
+                    UploadedfileName = DateTime.Now.Second + orgFileName;
+
+
+                    string fullPath = GetFullPathOfFile(UploadedfileName.Replace("\"", ""));
+
+                    // Create the directory.
+                    Directory.CreateDirectory(Directory.GetParent(fullPath).FullName);
+
+                    // Save the file to the server.
+                    await using FileStream output = System.IO.File.Create(fullPath);
+                    await source.CopyToAsync(output);
+                }
+
+                var response = new { FileName = UploadedfileName.Replace("\"", "") };
+
+                tblPartner modeltblPartner = new tblPartner();
+                modeltblPartner.PartnerIDP = Partner.PartnerIDP;
+                modeltblPartner.FullName = Partner.FullName;
+                modeltblPartner.MobileNo = Partner.MobileNo;
+                modeltblPartner.EmailID = Partner.EmailID;
+                modeltblPartner.Password = Partner.Password;
+                modeltblPartner.ProfileImage = response.FileName;
+                modeltblPartner.ActivityTypeID = Partner.ActivityTypeID;
+                modeltblPartner.KYCAttachment1 = Partner.KYCAttachment1;
+                modeltblPartner.KYCAttachment2 = Partner.KYCAttachment2;
+                modeltblPartner.KYCAttachment3 = Partner.KYCAttachment3;
+                modeltblPartner.KYCAttachment4 = Partner.KYCAttachment4;
+               modeltblPartner.VideoAttachment = Partner.VideoAttachment;
+                modeltblPartner.SocialFacebook = Partner.SocialFacebook;
+                modeltblPartner.SocialLinkedIn = Partner.SocialLinkedIn;
+                modeltblPartner.SocialTweeter = Partner.SocialTweeter;
+                modeltblPartner.SocialTelegram = Partner.SocialTelegram;
+                modeltblPartner.SocialOther = Partner.SocialOther;
+                modeltblPartner.SocialInstagram = Partner.SocialInstagram;
+                modeltblPartner.RefrenceLink = Partner.RefrenceLink;
+                modeltblPartner.YearofExperience = Partner.YearofExperience;
+                modeltblPartner.ApplicationStatus = Partner.ApplicationStatus;
+                modeltblPartner.BankDetail = Partner.BankDetail;
 
                 // File upload
                 var files = HttpContext.Request.Form.Files;
@@ -93,6 +144,7 @@ namespace BMS_API.Controllers.Partner
                         SqlDbType = System.Data.SqlDbType.BigInt,
                         Direction = System.Data.ParameterDirection.Output
                     };
+                    SqlParameter ProfileImage = new SqlParameter("@ProfileImage", (object)modeltblPartner.ProfileImage ?? DBNull.Value);
                     SqlParameter paramFullName = new SqlParameter("@FullName", (object)modeltblPartner.FullName ?? DBNull.Value);
                     SqlParameter paramMobileNo = new SqlParameter("@MobileNo", (object)modeltblPartner.MobileNo ?? DBNull.Value);
                     SqlParameter paramEmailID = new SqlParameter("@EmailID", (object)modeltblPartner.EmailID ?? DBNull.Value);
@@ -119,8 +171,8 @@ namespace BMS_API.Controllers.Partner
                         Direction = System.Data.ParameterDirection.Output
                     };
 
-                    var paramSqlQuery = "EXECUTE dbo.uspPartner_Registration @PartnerIDP OUTPUT, @FullName, @MobileNo, @EmailID, @Password, @ActivityTypeID, @KYCAttachment1, @KYCAttachment2, @KYCAttachment3, @KYCAttachment4, @VideoAttachment, @SocialFacebook, @SocialLinkedIn, @SocialInstagram,@RefrenceLink,@SocialTweeter,@Experience, @ApplicationStatus OUTPUT";
-                    await _context.Database.ExecuteSqlRawAsync(paramSqlQuery, paramPartnerIDP, paramFullName, paramMobileNo, paramEmailID, paramPassword, paramActivityTypeID, paramKYCAttachment1, paramKYCAttachment2, paramKYCAttachment3, paramKYCAttachment4, paramVideoAttachment, paramSocialFacebook, paramSocialLinkedIn, paramSocialInstagram, paramrReferenceLink, paramSocialTweeter, paramExperience, paramApplicationStatus);
+                    var paramSqlQuery = "EXECUTE dbo.uspPartner_Registration @PartnerIDP OUTPUT,@ProfileImage, @FullName, @MobileNo, @EmailID, @Password, @ActivityTypeID, @KYCAttachment1, @KYCAttachment2, @KYCAttachment3, @KYCAttachment4, @VideoAttachment, @SocialFacebook, @SocialLinkedIn, @SocialInstagram,@RefrenceLink,@SocialTweeter,@Experience, @ApplicationStatus OUTPUT";
+                    await _context.Database.ExecuteSqlRawAsync(paramSqlQuery, paramPartnerIDP, ProfileImage, paramFullName, paramMobileNo, paramEmailID, paramPassword, paramActivityTypeID, paramKYCAttachment1, paramKYCAttachment2, paramKYCAttachment3, paramKYCAttachment4, paramVideoAttachment, paramSocialFacebook, paramSocialLinkedIn, paramSocialInstagram, paramrReferenceLink, paramSocialTweeter, paramExperience, paramApplicationStatus);
 
                     if (Convert.ToInt32(paramApplicationStatus.Value) == 0 || Convert.ToInt32(paramApplicationStatus.Value) == 1 || Convert.ToInt32(paramApplicationStatus.Value) == 2 || Convert.ToInt32(paramApplicationStatus.Value) == 3 || Convert.ToInt32(paramApplicationStatus.Value) == 4)
                     {
@@ -173,7 +225,10 @@ namespace BMS_API.Controllers.Partner
             }
         }
         #endregion Registration
-
+        private string GetFullPathOfFile(string fileName)
+        {
+            return $"{_hostEnvironment.WebRootPath}\\Uploads\\{fileName}";
+        }
 
         #region GET
         [HttpPost]
