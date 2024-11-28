@@ -1,14 +1,14 @@
 ﻿using Microsoft.AspNetCore.Http;
-using System;
 using System.Collections.Generic;
+using System;
 
 namespace BMS_API.Models.Partner
 {
-    public partial class Activity
+    public class ActivityRequestModel
     {
         public Int64? ActivityIDP { get; set; }
         public Int64? InterestIDF { get; set; }
-        public string? BannerAttachment { get; set; }
+        public IList<IFormFile> BannerAttachment { get; set; }
         public string? ActivityTitle { get; set; }
         public string? ActivityAbout { get; set; }
         public string? Venue { get; set; }
@@ -22,10 +22,10 @@ namespace BMS_API.Models.Partner
         public Decimal? Price { get; set; }
         public string? WebinarLink { get; set; }
         public Int64? CouponIDF { get; set; }
-        public long? SkillID{  get; set; } 
-        public string? BookSkillButton {  get; set; } 
-        public TimeSpan? StartTimeActual {  get; set; }
+        public long? SkillID { get; set; }
+        public string? BookSkillButton { get; set; }
+        public TimeSpan? StartTimeActual { get; set; }
         public TimeSpan? EndTimeActual { get; set; }
-        public string ActivityInterestName {  get; set; }
+        public string ActivityInterestName { get; set; }
     }
 }

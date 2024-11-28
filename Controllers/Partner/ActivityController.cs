@@ -16,6 +16,9 @@ using BMS_API.Models;
 using BMS_API.Services;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Hosting;
+using System.Net.Http.Headers;
 
 namespace BMS_API.Controllers.Partner
 {
@@ -26,12 +29,14 @@ namespace BMS_API.Controllers.Partner
     {
         private readonly IActivityService _ActivityService;
         private readonly IWebHostEnvironment webHostEnvironment;
+        private readonly IWebHostEnvironment _hostEnvironment;
 
-        public ActivityController(BMSContext context, IActivityService __ActivityService, IWebHostEnvironment webHostEnvironment, IAuthService authService) : base(context, authService)
+        public ActivityController(IWebHostEnvironment hostEnvironment, BMSContext context, IActivityService __ActivityService, IWebHostEnvironment webHostEnvironment, IAuthService authService) : base(context, authService)
         {
             _context = context;
             _ActivityService = __ActivityService;
             this.webHostEnvironment = webHostEnvironment;
+            _hostEnvironment = hostEnvironment;
         }
 
         #region ADMIN-PUSH-BANNER
@@ -127,7 +132,7 @@ namespace BMS_API.Controllers.Partner
         #region INSERT-UPDATE
         [HttpPost]
         [Route("activity-insert-update")]
-        public async Task<IActionResult> Activity_InsertUpdate([FromForm] Activity modelActivity)
+        public async Task<IActionResult> Activity_InsertUpdate([FromForm] ActivityRequestModel modelActivity)
         {
             try
             {
@@ -167,41 +172,105 @@ namespace BMS_API.Controllers.Partner
                 string directoryPath = "";
                 string tempDirectoryPath = "";
 
-                // File upload
-                var files = HttpContext.Request.Form.Files;
-                if (files.Count > 0)
-                {
-                    var file1 = files[0];
-                    directoryPath = Path.Combine(webHostEnvironment.ContentRootPath, "Assets", "Partner");
-                    if (!Directory.Exists(directoryPath))
-                    {
-                        Directory.CreateDirectory(directoryPath);
-                    }
-                    tempDirectoryPath = Path.Combine(directoryPath, "Temp");
-                    if (!Directory.Exists(tempDirectoryPath))
-                    {
-                        Directory.CreateDirectory(tempDirectoryPath);
-                    }
-                    if (file1.Length > 0)
-                    {
-                        var fileType = Path.GetExtension(file1.FileName);
-                        var fileName = Guid.NewGuid().ToString().Replace("-", "") + Path.GetExtension(file1.FileName);
-                        using (var fileStream = new FileStream(Path.Combine(tempDirectoryPath, fileName), FileMode.Create))
+
+                //[HttpPost]
+                //public async Task<ActionResult> UploadBrowseFiles(IList<IFormFile> files)
+                //{
+                    
+                        string fileName = null;
+
+                        foreach (IFormFile source in modelActivity.BannerAttachment)
                         {
-                            await file1.CopyToAsync(fileStream);
+                            // Get original file name to get the extension from it.
+                            string orgFileName = ContentDispositionHeaderValue.Parse(source.ContentDisposition).FileName;
+
+                            // Create a new file name to avoid existing files on the server with the same names.
+                            // fileName = DateTime.Now.ToFileTime() + Path.GetExtension(orgFileName);
+                            fileName = DateTime.Now.Second + orgFileName;
+
+
+                            string fullPath = GetFullPathOfFile(fileName.Replace("\"", ""));
+
+                            // Create the directory.
+                            Directory.CreateDirectory(Directory.GetParent(fullPath).FullName);
+
+                            // Save the file to the server.
+                            await using FileStream output = System.IO.File.Create(fullPath);
+                            await source.CopyToAsync(output);
                         }
-                        modelActivity.BannerAttachment = fileName;
-                    }
-                }
+
+                        var response = new { FileName = fileName.Replace("\"", "") };
+                //ViewBag.FileName = response.FileName;
+
+                Activity activityRequestModel = new Activity();
+                    activityRequestModel.ActivityIDP = modelActivity.ActivityIDP;
+                    activityRequestModel.InterestIDF = modelActivity.InterestIDF;
+                    activityRequestModel.BannerAttachment = response.FileName;
+                    activityRequestModel.ActivityTitle = modelActivity.ActivityTitle;
+                    activityRequestModel.ActivityAbout = modelActivity.ActivityAbout;
+                    activityRequestModel.Venue = modelActivity.Venue;
+                    activityRequestModel.Longitude = modelActivity.Longitude;
+                    activityRequestModel.Latitude = modelActivity.Latitude;
+                    activityRequestModel.GeoLocation = modelActivity.GeoLocation;
+                    activityRequestModel.StartDateTime = modelActivity.StartDateTime;
+                    activityRequestModel.EndDateTime = modelActivity.EndDateTime;
+                    activityRequestModel.TotalSeats = modelActivity.TotalSeats;
+                    activityRequestModel.Price = modelActivity.Price;
+                    activityRequestModel.WebinarLink = modelActivity.WebinarLink;
+                    activityRequestModel.CouponIDF = modelActivity.CouponIDF;
+                    activityRequestModel.SkillID = modelActivity.SkillID;
+                    activityRequestModel.BookSkillButton = modelActivity.BookSkillButton;
+                    activityRequestModel.StartTimeActual = modelActivity.StartTimeActual;
+                    activityRequestModel.EndTimeActual = modelActivity.EndTimeActual;
+                    activityRequestModel.ActivityInterestName = modelActivity.ActivityInterestName;
+
+
+
+                
+                    //return Ok(response);
+
+
+
+
+
+
+
+
+                // File upload
+                //var files = HttpContext.Request.Form.Files;
+                //if (files.Count > 0)
+                //{
+                //    var file1 = files[0];
+                //    directoryPath = Path.Combine(webHostEnvironment.ContentRootPath, "Assets", "Partner");
+                //    if (!Directory.Exists(directoryPath))
+                //    {
+                //        Directory.CreateDirectory(directoryPath);
+                //    }
+                //    tempDirectoryPath = Path.Combine(directoryPath, "Temp");
+                //    if (!Directory.Exists(tempDirectoryPath))
+                //    {
+                //        Directory.CreateDirectory(tempDirectoryPath);
+                //    }
+                //    if (file1.Length > 0)
+                //    {
+                //        var fileType = Path.GetExtension(file1.FileName);
+                //        var fileName = Guid.NewGuid().ToString().Replace("-", "") + Path.GetExtension(file1.FileName);
+                //        using (var fileStream = new FileStream(Path.Combine(tempDirectoryPath, fileName), FileMode.Create))
+                //        {
+                //            await file1.CopyToAsync(fileStream);
+                //        }
+                //        modelActivity.BannerAttachment = fileName;
+                //    }
+                //}
 
                 if (modelActivity.ActivityIDP > 0)
                 {
-                    paramIdentity = await _ActivityService.Activity_Update(modelActivity);
+                    paramIdentity = await _ActivityService.Activity_Update(activityRequestModel);
                     paramIdentityAction = msgUpdated;
                 }
                 else
                 {
-                    paramIdentity = await _ActivityService.Activity_Insert(modelActivity);
+                    paramIdentity = await _ActivityService.Activity_Insert(activityRequestModel);
                     if (paramIdentity == 0)
                     {
                         return BadRequest(new { status = 201, data = new object[] { }, message = "Activity not created." });
@@ -211,7 +280,7 @@ namespace BMS_API.Controllers.Partner
                         paramIdentityAction = msgInserted; // Activity was successfully inserted
                     }
                 }
-                if (files.Count > 0 && paramIdentity > 0)
+                if (modelActivity.BannerAttachment.Count > 0 && paramIdentity > 0)
                 {
                     // File move to particular folder
                     string newDirectoryPath = Path.Combine(directoryPath, objUser.UserID.ToString(), "Activity");
@@ -245,6 +314,12 @@ namespace BMS_API.Controllers.Partner
                 await ErrorLog(1, e.Message, $"Controller : uspActivity_Insert", 1);
                 return BadRequest(new { status = 0, data = 0, message = msgError });
             }
+        }
+
+
+        private string GetFullPathOfFile(string fileName)
+        {
+            return $"{_hostEnvironment.WebRootPath}\\Uploads\\{fileName}";
         }
         #endregion INSERT-UPDATE
 

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BMS_API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dbfc1937cab7368959aa6a9a1199eaadbef4531a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f920d8940924b21430daca5b328288133bdf7474")]
 [assembly: System.Reflection.AssemblyProductAttribute("BMS_API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BMS_API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

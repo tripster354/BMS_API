@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "LFH4XaeFALLHt1X2pBSyKkjZh5RwJEBRduj/zWCSo9I=",
+  "Hash": "CP5nF/rWgRfxeUMiq3QEm3t1TYOcvZprqllfRilqBtg=",
   "Source": "BMS_API",
   "BasePath": "_content/BMS_API",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "BMS_API\\wwwroot",
       "Source": "BMS_API",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\005d313f-889a-4168-9bc5-cca9b729440c.mp4",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\005d313f-889a-4168-9bc5-cca9b729440c.mp4",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/005d313f-889a-4168-9bc5-cca9b729440c.mp4",
       "AssetKind": "All",
@@ -36,10 +36,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\005d313f-889a-4168-9bc5-cca9b729440c.mp4"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\07bcb188-53b3-4af9-a0d3-bb89c342d64e.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\07bcb188-53b3-4af9-a0d3-bb89c342d64e.png",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/07bcb188-53b3-4af9-a0d3-bb89c342d64e.png",
       "AssetKind": "All",
@@ -55,10 +55,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\07bcb188-53b3-4af9-a0d3-bb89c342d64e.png"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\09346f43-2822-4f14-b6b6-ac0ea648bfbc.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\09346f43-2822-4f14-b6b6-ac0ea648bfbc.png",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/09346f43-2822-4f14-b6b6-ac0ea648bfbc.png",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\09346f43-2822-4f14-b6b6-ac0ea648bfbc.png"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\0a261f1a-7e4f-4175-ba5d-7e8d4a43a97e.docx",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\0a261f1a-7e4f-4175-ba5d-7e8d4a43a97e.docx",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/0a261f1a-7e4f-4175-ba5d-7e8d4a43a97e.docx",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\0a261f1a-7e4f-4175-ba5d-7e8d4a43a97e.docx"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\0b3eb354-d5f5-45ef-b39c-12379b57b815.mp4",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\0b3eb354-d5f5-45ef-b39c-12379b57b815.mp4",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/0b3eb354-d5f5-45ef-b39c-12379b57b815.mp4",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\0b3eb354-d5f5-45ef-b39c-12379b57b815.mp4"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\0bbbf4b9-0a75-42d2-b1b4-f2ae0fafd0e9.docx",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\0bbbf4b9-0a75-42d2-b1b4-f2ae0fafd0e9.docx",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/0bbbf4b9-0a75-42d2-b1b4-f2ae0fafd0e9.docx",
       "AssetKind": "All",
@@ -131,10 +131,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\0bbbf4b9-0a75-42d2-b1b4-f2ae0fafd0e9.docx"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\0eb95e37-a634-4110-91dd-236612f5edf3.mp4",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\0eb95e37-a634-4110-91dd-236612f5edf3.mp4",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/0eb95e37-a634-4110-91dd-236612f5edf3.mp4",
       "AssetKind": "All",
@@ -150,10 +150,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\0eb95e37-a634-4110-91dd-236612f5edf3.mp4"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\0eef61a5-d64f-4884-890a-784b8c75da45.mp4",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\0eef61a5-d64f-4884-890a-784b8c75da45.mp4",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/0eef61a5-d64f-4884-890a-784b8c75da45.mp4",
       "AssetKind": "All",
@@ -169,10 +169,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\0eef61a5-d64f-4884-890a-784b8c75da45.mp4"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\0f4f39d4-dd0c-415a-b6b2-3727331acc3f.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\0f4f39d4-dd0c-415a-b6b2-3727331acc3f.png",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/0f4f39d4-dd0c-415a-b6b2-3727331acc3f.png",
       "AssetKind": "All",
@@ -188,10 +188,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\0f4f39d4-dd0c-415a-b6b2-3727331acc3f.png"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\0fcb6ee5-9962-4578-9e8e-957cb5037291.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\0fcb6ee5-9962-4578-9e8e-957cb5037291.png",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/0fcb6ee5-9962-4578-9e8e-957cb5037291.png",
       "AssetKind": "All",
@@ -207,10 +207,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\0fcb6ee5-9962-4578-9e8e-957cb5037291.png"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\103b5d25-b9e5-4b7d-8496-dc003226b09c.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\103b5d25-b9e5-4b7d-8496-dc003226b09c.png",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/103b5d25-b9e5-4b7d-8496-dc003226b09c.png",
       "AssetKind": "All",
@@ -226,10 +226,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\103b5d25-b9e5-4b7d-8496-dc003226b09c.png"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\10c1450b-f073-4842-b9c0-8f4fb9fee3ad.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\10c1450b-f073-4842-b9c0-8f4fb9fee3ad.png",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/10c1450b-f073-4842-b9c0-8f4fb9fee3ad.png",
       "AssetKind": "All",
@@ -245,10 +245,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\10c1450b-f073-4842-b9c0-8f4fb9fee3ad.png"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\12882c9e-80d6-4594-b3e0-2de691c3cdaa.mp4",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\12882c9e-80d6-4594-b3e0-2de691c3cdaa.mp4",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/12882c9e-80d6-4594-b3e0-2de691c3cdaa.mp4",
       "AssetKind": "All",
@@ -264,10 +264,29 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\12882c9e-80d6-4594-b3e0-2de691c3cdaa.mp4"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\20d8ff30-edcb-4e26-810c-51a48bd124e9.mp4",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\14Thankyou.jpg",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
+      "BasePath": "_content/BMS_API",
+      "RelativePath": "Uploads/14Thankyou.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\14Thankyou.jpg"
+    },
+    {
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\20d8ff30-edcb-4e26-810c-51a48bd124e9.mp4",
+      "SourceId": "BMS_API",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/20d8ff30-edcb-4e26-810c-51a48bd124e9.mp4",
       "AssetKind": "All",
@@ -283,10 +302,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\20d8ff30-edcb-4e26-810c-51a48bd124e9.mp4"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\22e1bf58-f524-4570-a3c7-e73dfb2bc06b.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\22e1bf58-f524-4570-a3c7-e73dfb2bc06b.png",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/22e1bf58-f524-4570-a3c7-e73dfb2bc06b.png",
       "AssetKind": "All",
@@ -302,10 +321,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\22e1bf58-f524-4570-a3c7-e73dfb2bc06b.png"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\2596df3b-bb12-4c07-a9fe-5e90cc6808a2.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\2596df3b-bb12-4c07-a9fe-5e90cc6808a2.png",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/2596df3b-bb12-4c07-a9fe-5e90cc6808a2.png",
       "AssetKind": "All",
@@ -321,10 +340,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\2596df3b-bb12-4c07-a9fe-5e90cc6808a2.png"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\28944a99-2936-4013-892a-01539c4d6646.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\28944a99-2936-4013-892a-01539c4d6646.png",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/28944a99-2936-4013-892a-01539c4d6646.png",
       "AssetKind": "All",
@@ -340,10 +359,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\28944a99-2936-4013-892a-01539c4d6646.png"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\290e1081-3f3d-4f8e-9616-2ac520261b16.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\290e1081-3f3d-4f8e-9616-2ac520261b16.png",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/290e1081-3f3d-4f8e-9616-2ac520261b16.png",
       "AssetKind": "All",
@@ -359,10 +378,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\290e1081-3f3d-4f8e-9616-2ac520261b16.png"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\2979b712-24d0-4822-9e17-029ae939bef7.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\2979b712-24d0-4822-9e17-029ae939bef7.png",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/2979b712-24d0-4822-9e17-029ae939bef7.png",
       "AssetKind": "All",
@@ -378,10 +397,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\2979b712-24d0-4822-9e17-029ae939bef7.png"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\29c0f6fc-e1c0-4111-afb3-330cc361f3de.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\29c0f6fc-e1c0-4111-afb3-330cc361f3de.png",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/29c0f6fc-e1c0-4111-afb3-330cc361f3de.png",
       "AssetKind": "All",
@@ -397,10 +416,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\29c0f6fc-e1c0-4111-afb3-330cc361f3de.png"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\2a54aa02-aa3f-43fe-88c8-37f9beca3af0.xlsx",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\2a54aa02-aa3f-43fe-88c8-37f9beca3af0.xlsx",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/2a54aa02-aa3f-43fe-88c8-37f9beca3af0.xlsx",
       "AssetKind": "All",
@@ -416,10 +435,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\2a54aa02-aa3f-43fe-88c8-37f9beca3af0.xlsx"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\2cf6fe2e-4a27-409d-b91d-643da98c737c.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\2cf6fe2e-4a27-409d-b91d-643da98c737c.png",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/2cf6fe2e-4a27-409d-b91d-643da98c737c.png",
       "AssetKind": "All",
@@ -435,10 +454,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\2cf6fe2e-4a27-409d-b91d-643da98c737c.png"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\2f003a77-2a4e-4a01-a63d-9758beea6573.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\2f003a77-2a4e-4a01-a63d-9758beea6573.png",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/2f003a77-2a4e-4a01-a63d-9758beea6573.png",
       "AssetKind": "All",
@@ -454,10 +473,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\2f003a77-2a4e-4a01-a63d-9758beea6573.png"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\3037aa6e-f5f7-427c-b61f-7c34bfbd3932.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\3037aa6e-f5f7-427c-b61f-7c34bfbd3932.png",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/3037aa6e-f5f7-427c-b61f-7c34bfbd3932.png",
       "AssetKind": "All",
@@ -473,10 +492,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\3037aa6e-f5f7-427c-b61f-7c34bfbd3932.png"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\325d1cf7-a98d-43c2-941c-d8bf8a507652.mp4",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\325d1cf7-a98d-43c2-941c-d8bf8a507652.mp4",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/325d1cf7-a98d-43c2-941c-d8bf8a507652.mp4",
       "AssetKind": "All",
@@ -492,10 +511,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\325d1cf7-a98d-43c2-941c-d8bf8a507652.mp4"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\36d6288a-85d5-4954-a7c3-ae95a73d269c.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\36d6288a-85d5-4954-a7c3-ae95a73d269c.png",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/36d6288a-85d5-4954-a7c3-ae95a73d269c.png",
       "AssetKind": "All",
@@ -511,10 +530,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\36d6288a-85d5-4954-a7c3-ae95a73d269c.png"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\382f23cc-6905-4130-86e1-87a99b4681df.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\382f23cc-6905-4130-86e1-87a99b4681df.png",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/382f23cc-6905-4130-86e1-87a99b4681df.png",
       "AssetKind": "All",
@@ -530,10 +549,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\382f23cc-6905-4130-86e1-87a99b4681df.png"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\3c4cfd21-a82e-45d2-99c1-c08d98340916.mp4",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\3c4cfd21-a82e-45d2-99c1-c08d98340916.mp4",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/3c4cfd21-a82e-45d2-99c1-c08d98340916.mp4",
       "AssetKind": "All",
@@ -549,10 +568,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\3c4cfd21-a82e-45d2-99c1-c08d98340916.mp4"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\426ba423-e82d-46aa-be2c-50de05f498b3.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\426ba423-e82d-46aa-be2c-50de05f498b3.png",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/426ba423-e82d-46aa-be2c-50de05f498b3.png",
       "AssetKind": "All",
@@ -568,10 +587,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\426ba423-e82d-46aa-be2c-50de05f498b3.png"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\44341dfe-6838-41fd-bac6-2be4d7e0f064.mp4",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\44341dfe-6838-41fd-bac6-2be4d7e0f064.mp4",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/44341dfe-6838-41fd-bac6-2be4d7e0f064.mp4",
       "AssetKind": "All",
@@ -587,10 +606,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\44341dfe-6838-41fd-bac6-2be4d7e0f064.mp4"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\453e15e3-255f-4d5b-b2b3-b7ddfe0fa501.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\453e15e3-255f-4d5b-b2b3-b7ddfe0fa501.png",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/453e15e3-255f-4d5b-b2b3-b7ddfe0fa501.png",
       "AssetKind": "All",
@@ -606,10 +625,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\453e15e3-255f-4d5b-b2b3-b7ddfe0fa501.png"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\47f353aa-5f77-4c17-b59f-294d6e368771.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\47f353aa-5f77-4c17-b59f-294d6e368771.png",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/47f353aa-5f77-4c17-b59f-294d6e368771.png",
       "AssetKind": "All",
@@ -625,10 +644,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\47f353aa-5f77-4c17-b59f-294d6e368771.png"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\4bce5040-1afd-4517-a3c7-a5bc46eabae9.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\4bce5040-1afd-4517-a3c7-a5bc46eabae9.png",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/4bce5040-1afd-4517-a3c7-a5bc46eabae9.png",
       "AssetKind": "All",
@@ -644,10 +663,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\4bce5040-1afd-4517-a3c7-a5bc46eabae9.png"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\4de8d972-d3dc-467f-9eba-4eca6065c78a.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\4de8d972-d3dc-467f-9eba-4eca6065c78a.png",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/4de8d972-d3dc-467f-9eba-4eca6065c78a.png",
       "AssetKind": "All",
@@ -663,10 +682,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\4de8d972-d3dc-467f-9eba-4eca6065c78a.png"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\508e4604-3217-48a4-b6eb-216271b039d6.mp4",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\508e4604-3217-48a4-b6eb-216271b039d6.mp4",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/508e4604-3217-48a4-b6eb-216271b039d6.mp4",
       "AssetKind": "All",
@@ -682,10 +701,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\508e4604-3217-48a4-b6eb-216271b039d6.mp4"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\52579e6c-b7ec-4add-9bd9-928350d8688c.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\52579e6c-b7ec-4add-9bd9-928350d8688c.png",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/52579e6c-b7ec-4add-9bd9-928350d8688c.png",
       "AssetKind": "All",
@@ -701,10 +720,29 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\52579e6c-b7ec-4add-9bd9-928350d8688c.png"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\54709494-dcc6-48d5-8876-b2c9b3e86a8d.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\53Thankyou.jpg",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
+      "BasePath": "_content/BMS_API",
+      "RelativePath": "Uploads/53Thankyou.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\53Thankyou.jpg"
+    },
+    {
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\54709494-dcc6-48d5-8876-b2c9b3e86a8d.png",
+      "SourceId": "BMS_API",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/54709494-dcc6-48d5-8876-b2c9b3e86a8d.png",
       "AssetKind": "All",
@@ -720,10 +758,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\54709494-dcc6-48d5-8876-b2c9b3e86a8d.png"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\55e596ad-7d81-4551-9b32-7952521fe6e4.mp4",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\55e596ad-7d81-4551-9b32-7952521fe6e4.mp4",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/55e596ad-7d81-4551-9b32-7952521fe6e4.mp4",
       "AssetKind": "All",
@@ -739,10 +777,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\55e596ad-7d81-4551-9b32-7952521fe6e4.mp4"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\59295025-c3eb-4956-9a9d-95d51115eaf0.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\59295025-c3eb-4956-9a9d-95d51115eaf0.png",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/59295025-c3eb-4956-9a9d-95d51115eaf0.png",
       "AssetKind": "All",
@@ -758,10 +796,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\59295025-c3eb-4956-9a9d-95d51115eaf0.png"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\60313875-b281-4906-8ebf-905af81fbfd9.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\60313875-b281-4906-8ebf-905af81fbfd9.png",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/60313875-b281-4906-8ebf-905af81fbfd9.png",
       "AssetKind": "All",
@@ -777,10 +815,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\60313875-b281-4906-8ebf-905af81fbfd9.png"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\6062ea50-9a3b-4e8b-ba0c-787457f4191e.docx",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\6062ea50-9a3b-4e8b-ba0c-787457f4191e.docx",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/6062ea50-9a3b-4e8b-ba0c-787457f4191e.docx",
       "AssetKind": "All",
@@ -796,10 +834,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\6062ea50-9a3b-4e8b-ba0c-787457f4191e.docx"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\627de619-4bcb-4f54-bf86-d45a3346f493.mp4",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\627de619-4bcb-4f54-bf86-d45a3346f493.mp4",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/627de619-4bcb-4f54-bf86-d45a3346f493.mp4",
       "AssetKind": "All",
@@ -815,10 +853,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\627de619-4bcb-4f54-bf86-d45a3346f493.mp4"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\63ffe51e-9a49-415b-8658-bb110e813e7b.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\63ffe51e-9a49-415b-8658-bb110e813e7b.png",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/63ffe51e-9a49-415b-8658-bb110e813e7b.png",
       "AssetKind": "All",
@@ -834,10 +872,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\63ffe51e-9a49-415b-8658-bb110e813e7b.png"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\6a7eac1f-6933-49a6-9b13-4b23a3031cd1.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\6a7eac1f-6933-49a6-9b13-4b23a3031cd1.png",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/6a7eac1f-6933-49a6-9b13-4b23a3031cd1.png",
       "AssetKind": "All",
@@ -853,10 +891,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\6a7eac1f-6933-49a6-9b13-4b23a3031cd1.png"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\6c6cf73e-f4d6-4005-817f-d427fd0a85a5.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\6c6cf73e-f4d6-4005-817f-d427fd0a85a5.png",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/6c6cf73e-f4d6-4005-817f-d427fd0a85a5.png",
       "AssetKind": "All",
@@ -872,10 +910,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\6c6cf73e-f4d6-4005-817f-d427fd0a85a5.png"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\701e7c88-6885-43c0-8e36-3c8ff3296723.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\701e7c88-6885-43c0-8e36-3c8ff3296723.png",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/701e7c88-6885-43c0-8e36-3c8ff3296723.png",
       "AssetKind": "All",
@@ -891,10 +929,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\701e7c88-6885-43c0-8e36-3c8ff3296723.png"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\71eeb3ce-8189-4539-9103-09328b0a9993.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\71eeb3ce-8189-4539-9103-09328b0a9993.png",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/71eeb3ce-8189-4539-9103-09328b0a9993.png",
       "AssetKind": "All",
@@ -910,10 +948,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\71eeb3ce-8189-4539-9103-09328b0a9993.png"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\72598944-6ff2-4a6b-96dd-1eff4e165952.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\72598944-6ff2-4a6b-96dd-1eff4e165952.png",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/72598944-6ff2-4a6b-96dd-1eff4e165952.png",
       "AssetKind": "All",
@@ -929,10 +967,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\72598944-6ff2-4a6b-96dd-1eff4e165952.png"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\7414ae51-a74f-4e4f-b17d-fa5ed8616f25.mp4",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\7414ae51-a74f-4e4f-b17d-fa5ed8616f25.mp4",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/7414ae51-a74f-4e4f-b17d-fa5ed8616f25.mp4",
       "AssetKind": "All",
@@ -948,10 +986,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\7414ae51-a74f-4e4f-b17d-fa5ed8616f25.mp4"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\76322ae3-c9bf-490d-b466-3b9c0772d031.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\76322ae3-c9bf-490d-b466-3b9c0772d031.png",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/76322ae3-c9bf-490d-b466-3b9c0772d031.png",
       "AssetKind": "All",
@@ -967,10 +1005,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\76322ae3-c9bf-490d-b466-3b9c0772d031.png"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\76ff02b8-b568-405e-98b9-8e17900524e1.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\76ff02b8-b568-405e-98b9-8e17900524e1.png",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/76ff02b8-b568-405e-98b9-8e17900524e1.png",
       "AssetKind": "All",
@@ -986,10 +1024,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\76ff02b8-b568-405e-98b9-8e17900524e1.png"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\7810cb07-4096-4583-ab5d-33f2f9f728cf.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\7810cb07-4096-4583-ab5d-33f2f9f728cf.png",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/7810cb07-4096-4583-ab5d-33f2f9f728cf.png",
       "AssetKind": "All",
@@ -1005,10 +1043,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\7810cb07-4096-4583-ab5d-33f2f9f728cf.png"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\7b73a9dd-a093-4239-acbe-0c837af09dab.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\7b73a9dd-a093-4239-acbe-0c837af09dab.png",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/7b73a9dd-a093-4239-acbe-0c837af09dab.png",
       "AssetKind": "All",
@@ -1024,10 +1062,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\7b73a9dd-a093-4239-acbe-0c837af09dab.png"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\7bc6436e-bdfd-4b28-8f3b-cc85601b0a98.mp4",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\7bc6436e-bdfd-4b28-8f3b-cc85601b0a98.mp4",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/7bc6436e-bdfd-4b28-8f3b-cc85601b0a98.mp4",
       "AssetKind": "All",
@@ -1043,10 +1081,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\7bc6436e-bdfd-4b28-8f3b-cc85601b0a98.mp4"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\7ec84fd2-099f-4dc8-afa5-75f5418e43f9.docx",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\7ec84fd2-099f-4dc8-afa5-75f5418e43f9.docx",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/7ec84fd2-099f-4dc8-afa5-75f5418e43f9.docx",
       "AssetKind": "All",
@@ -1062,10 +1100,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\7ec84fd2-099f-4dc8-afa5-75f5418e43f9.docx"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\7f453980-c68b-4dc5-a733-7ca15088af63.mp4",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\7f453980-c68b-4dc5-a733-7ca15088af63.mp4",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/7f453980-c68b-4dc5-a733-7ca15088af63.mp4",
       "AssetKind": "All",
@@ -1081,10 +1119,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\7f453980-c68b-4dc5-a733-7ca15088af63.mp4"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\811df240-4ff5-49de-8876-512e662aaf28.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\811df240-4ff5-49de-8876-512e662aaf28.png",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/811df240-4ff5-49de-8876-512e662aaf28.png",
       "AssetKind": "All",
@@ -1100,10 +1138,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\811df240-4ff5-49de-8876-512e662aaf28.png"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\82022882-c904-4fee-b91f-c0bacae9f750.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\82022882-c904-4fee-b91f-c0bacae9f750.png",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/82022882-c904-4fee-b91f-c0bacae9f750.png",
       "AssetKind": "All",
@@ -1119,10 +1157,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\82022882-c904-4fee-b91f-c0bacae9f750.png"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\8311a3c9-77f4-4eb1-927f-f7edf593a3cb.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\8311a3c9-77f4-4eb1-927f-f7edf593a3cb.png",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/8311a3c9-77f4-4eb1-927f-f7edf593a3cb.png",
       "AssetKind": "All",
@@ -1138,10 +1176,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\8311a3c9-77f4-4eb1-927f-f7edf593a3cb.png"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\84807a04-6fa4-4ef4-9132-10a0b845fb4a.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\84807a04-6fa4-4ef4-9132-10a0b845fb4a.png",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/84807a04-6fa4-4ef4-9132-10a0b845fb4a.png",
       "AssetKind": "All",
@@ -1157,10 +1195,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\84807a04-6fa4-4ef4-9132-10a0b845fb4a.png"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\86cb501b-67a0-4498-bd38-69a258415872.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\86cb501b-67a0-4498-bd38-69a258415872.png",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/86cb501b-67a0-4498-bd38-69a258415872.png",
       "AssetKind": "All",
@@ -1176,10 +1214,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\86cb501b-67a0-4498-bd38-69a258415872.png"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\8aac54e3-43b0-4726-b314-e85464ffab73.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\8aac54e3-43b0-4726-b314-e85464ffab73.png",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/8aac54e3-43b0-4726-b314-e85464ffab73.png",
       "AssetKind": "All",
@@ -1195,10 +1233,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\8aac54e3-43b0-4726-b314-e85464ffab73.png"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\8b1715e2-234c-4d19-8c84-9caf179afa2f.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\8b1715e2-234c-4d19-8c84-9caf179afa2f.png",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/8b1715e2-234c-4d19-8c84-9caf179afa2f.png",
       "AssetKind": "All",
@@ -1214,10 +1252,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\8b1715e2-234c-4d19-8c84-9caf179afa2f.png"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\8dc07efe-7587-4e03-b907-bb76da2ed611.mp4",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\8dc07efe-7587-4e03-b907-bb76da2ed611.mp4",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/8dc07efe-7587-4e03-b907-bb76da2ed611.mp4",
       "AssetKind": "All",
@@ -1233,10 +1271,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\8dc07efe-7587-4e03-b907-bb76da2ed611.mp4"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\8f61c19d-fdcb-4718-a84b-8e8afcb705e9.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\8f61c19d-fdcb-4718-a84b-8e8afcb705e9.png",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/8f61c19d-fdcb-4718-a84b-8e8afcb705e9.png",
       "AssetKind": "All",
@@ -1252,10 +1290,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\8f61c19d-fdcb-4718-a84b-8e8afcb705e9.png"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\8feae8dd-6ce3-42d0-a97d-bd114f8e65da.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\8feae8dd-6ce3-42d0-a97d-bd114f8e65da.png",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/8feae8dd-6ce3-42d0-a97d-bd114f8e65da.png",
       "AssetKind": "All",
@@ -1271,10 +1309,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\8feae8dd-6ce3-42d0-a97d-bd114f8e65da.png"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\911ed855-1823-4561-a0fe-d4a00c083d20.mp4",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\911ed855-1823-4561-a0fe-d4a00c083d20.mp4",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/911ed855-1823-4561-a0fe-d4a00c083d20.mp4",
       "AssetKind": "All",
@@ -1290,10 +1328,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\911ed855-1823-4561-a0fe-d4a00c083d20.mp4"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\975ae02b-bc3b-4499-b724-606786cc5962.mp4",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\975ae02b-bc3b-4499-b724-606786cc5962.mp4",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/975ae02b-bc3b-4499-b724-606786cc5962.mp4",
       "AssetKind": "All",
@@ -1309,10 +1347,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\975ae02b-bc3b-4499-b724-606786cc5962.mp4"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\98c73b41-9f02-4bb7-b23c-0e20e4109ca3.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\98c73b41-9f02-4bb7-b23c-0e20e4109ca3.png",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/98c73b41-9f02-4bb7-b23c-0e20e4109ca3.png",
       "AssetKind": "All",
@@ -1328,10 +1366,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\98c73b41-9f02-4bb7-b23c-0e20e4109ca3.png"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\9b6662d6-0eb3-46d6-8cd8-228d8e07df03.mp4",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\9b6662d6-0eb3-46d6-8cd8-228d8e07df03.mp4",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/9b6662d6-0eb3-46d6-8cd8-228d8e07df03.mp4",
       "AssetKind": "All",
@@ -1347,10 +1385,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\9b6662d6-0eb3-46d6-8cd8-228d8e07df03.mp4"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\9b8652b8-4fed-473a-a75e-d66c939fda63.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\9b8652b8-4fed-473a-a75e-d66c939fda63.png",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/9b8652b8-4fed-473a-a75e-d66c939fda63.png",
       "AssetKind": "All",
@@ -1366,10 +1404,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\9b8652b8-4fed-473a-a75e-d66c939fda63.png"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\9f63d486-ea95-4594-ad61-2ebadbc795bd.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\9f63d486-ea95-4594-ad61-2ebadbc795bd.png",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/9f63d486-ea95-4594-ad61-2ebadbc795bd.png",
       "AssetKind": "All",
@@ -1385,10 +1423,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\9f63d486-ea95-4594-ad61-2ebadbc795bd.png"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\a0a6a7b9-151c-489e-901d-04795c97110d.mp4",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\a0a6a7b9-151c-489e-901d-04795c97110d.mp4",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/a0a6a7b9-151c-489e-901d-04795c97110d.mp4",
       "AssetKind": "All",
@@ -1404,10 +1442,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\a0a6a7b9-151c-489e-901d-04795c97110d.mp4"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\a0be8d08-b09c-4c34-9126-ab320817492f.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\a0be8d08-b09c-4c34-9126-ab320817492f.png",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/a0be8d08-b09c-4c34-9126-ab320817492f.png",
       "AssetKind": "All",
@@ -1423,10 +1461,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\a0be8d08-b09c-4c34-9126-ab320817492f.png"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\a15fb7d0-4530-4a60-a284-99514e9d702b.mp4",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\a15fb7d0-4530-4a60-a284-99514e9d702b.mp4",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/a15fb7d0-4530-4a60-a284-99514e9d702b.mp4",
       "AssetKind": "All",
@@ -1442,10 +1480,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\a15fb7d0-4530-4a60-a284-99514e9d702b.mp4"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\a59e0c36-1718-48df-9d49-f78f298b57eb.docx",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\a59e0c36-1718-48df-9d49-f78f298b57eb.docx",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/a59e0c36-1718-48df-9d49-f78f298b57eb.docx",
       "AssetKind": "All",
@@ -1461,10 +1499,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\a59e0c36-1718-48df-9d49-f78f298b57eb.docx"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\ad2136aa-450d-451e-b33b-473c128367df.docx",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\ad2136aa-450d-451e-b33b-473c128367df.docx",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/ad2136aa-450d-451e-b33b-473c128367df.docx",
       "AssetKind": "All",
@@ -1480,10 +1518,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\ad2136aa-450d-451e-b33b-473c128367df.docx"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\af6f807d-5d6b-4338-b236-9ad09a873942.mp4",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\af6f807d-5d6b-4338-b236-9ad09a873942.mp4",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/af6f807d-5d6b-4338-b236-9ad09a873942.mp4",
       "AssetKind": "All",
@@ -1499,10 +1537,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\af6f807d-5d6b-4338-b236-9ad09a873942.mp4"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\b03a50a8-a0ec-4161-bc8b-00e76c122a73.mp4",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\b03a50a8-a0ec-4161-bc8b-00e76c122a73.mp4",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/b03a50a8-a0ec-4161-bc8b-00e76c122a73.mp4",
       "AssetKind": "All",
@@ -1518,10 +1556,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\b03a50a8-a0ec-4161-bc8b-00e76c122a73.mp4"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\b77ab870-9fff-4b5e-8dce-50c536b29c39.mp4",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\b77ab870-9fff-4b5e-8dce-50c536b29c39.mp4",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/b77ab870-9fff-4b5e-8dce-50c536b29c39.mp4",
       "AssetKind": "All",
@@ -1537,10 +1575,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\b77ab870-9fff-4b5e-8dce-50c536b29c39.mp4"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\b9123b10-cd58-4761-848c-aafab9fbbba3.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\b9123b10-cd58-4761-848c-aafab9fbbba3.png",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/b9123b10-cd58-4761-848c-aafab9fbbba3.png",
       "AssetKind": "All",
@@ -1556,10 +1594,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\b9123b10-cd58-4761-848c-aafab9fbbba3.png"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\bd85a54c-2178-4800-b5e1-38476bdd9589.mp4",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\bd85a54c-2178-4800-b5e1-38476bdd9589.mp4",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/bd85a54c-2178-4800-b5e1-38476bdd9589.mp4",
       "AssetKind": "All",
@@ -1575,10 +1613,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\bd85a54c-2178-4800-b5e1-38476bdd9589.mp4"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\bf23a603-fbcb-4558-bccd-8982cd005268.mp4",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\bf23a603-fbcb-4558-bccd-8982cd005268.mp4",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/bf23a603-fbcb-4558-bccd-8982cd005268.mp4",
       "AssetKind": "All",
@@ -1594,10 +1632,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\bf23a603-fbcb-4558-bccd-8982cd005268.mp4"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\bf2b3328-8a36-47cc-bfd3-67ee1c881f71.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\bf2b3328-8a36-47cc-bfd3-67ee1c881f71.png",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/bf2b3328-8a36-47cc-bfd3-67ee1c881f71.png",
       "AssetKind": "All",
@@ -1613,10 +1651,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\bf2b3328-8a36-47cc-bfd3-67ee1c881f71.png"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\bfbe0430-53db-49b8-b530-2f9ca0eafe5e.mp4",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\bfbe0430-53db-49b8-b530-2f9ca0eafe5e.mp4",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/bfbe0430-53db-49b8-b530-2f9ca0eafe5e.mp4",
       "AssetKind": "All",
@@ -1632,10 +1670,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\bfbe0430-53db-49b8-b530-2f9ca0eafe5e.mp4"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\c01ece51-b8d4-4a00-a443-d234d599bcdc.mp4",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\c01ece51-b8d4-4a00-a443-d234d599bcdc.mp4",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/c01ece51-b8d4-4a00-a443-d234d599bcdc.mp4",
       "AssetKind": "All",
@@ -1651,10 +1689,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\c01ece51-b8d4-4a00-a443-d234d599bcdc.mp4"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\c0ab49b4-c6bb-4d32-b31d-967d26959329.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\c0ab49b4-c6bb-4d32-b31d-967d26959329.png",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/c0ab49b4-c6bb-4d32-b31d-967d26959329.png",
       "AssetKind": "All",
@@ -1670,10 +1708,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\c0ab49b4-c6bb-4d32-b31d-967d26959329.png"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\c453d749-a04b-43f9-8440-fce807e78120.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\c453d749-a04b-43f9-8440-fce807e78120.png",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/c453d749-a04b-43f9-8440-fce807e78120.png",
       "AssetKind": "All",
@@ -1689,10 +1727,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\c453d749-a04b-43f9-8440-fce807e78120.png"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\c5cfba02-b7cd-46fd-b9fc-9a6e3f87c6cb.mp4",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\c5cfba02-b7cd-46fd-b9fc-9a6e3f87c6cb.mp4",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/c5cfba02-b7cd-46fd-b9fc-9a6e3f87c6cb.mp4",
       "AssetKind": "All",
@@ -1708,10 +1746,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\c5cfba02-b7cd-46fd-b9fc-9a6e3f87c6cb.mp4"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\c6a704fa-278b-4230-9eb6-313a029fb1b9.mp4",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\c6a704fa-278b-4230-9eb6-313a029fb1b9.mp4",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/c6a704fa-278b-4230-9eb6-313a029fb1b9.mp4",
       "AssetKind": "All",
@@ -1727,10 +1765,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\c6a704fa-278b-4230-9eb6-313a029fb1b9.mp4"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\c7eb20ba-fcef-4340-b037-de50b90f7dce.mp4",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\c7eb20ba-fcef-4340-b037-de50b90f7dce.mp4",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/c7eb20ba-fcef-4340-b037-de50b90f7dce.mp4",
       "AssetKind": "All",
@@ -1746,10 +1784,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\c7eb20ba-fcef-4340-b037-de50b90f7dce.mp4"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\ceb2faf6-523a-425a-8e1c-352e1619e5a5.mp4",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\ceb2faf6-523a-425a-8e1c-352e1619e5a5.mp4",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/ceb2faf6-523a-425a-8e1c-352e1619e5a5.mp4",
       "AssetKind": "All",
@@ -1765,10 +1803,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\ceb2faf6-523a-425a-8e1c-352e1619e5a5.mp4"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\cfe5b628-d650-4ede-ae10-9a72bf2ac083.mp4",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\cfe5b628-d650-4ede-ae10-9a72bf2ac083.mp4",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/cfe5b628-d650-4ede-ae10-9a72bf2ac083.mp4",
       "AssetKind": "All",
@@ -1784,10 +1822,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\cfe5b628-d650-4ede-ae10-9a72bf2ac083.mp4"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\d1e6c327-8daf-4956-8d11-d959c1a3db5f.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\d1e6c327-8daf-4956-8d11-d959c1a3db5f.png",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/d1e6c327-8daf-4956-8d11-d959c1a3db5f.png",
       "AssetKind": "All",
@@ -1803,10 +1841,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\d1e6c327-8daf-4956-8d11-d959c1a3db5f.png"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\d2366139-08bb-4755-bf1a-4354bec9fc8a.mp4",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\d2366139-08bb-4755-bf1a-4354bec9fc8a.mp4",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/d2366139-08bb-4755-bf1a-4354bec9fc8a.mp4",
       "AssetKind": "All",
@@ -1822,10 +1860,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\d2366139-08bb-4755-bf1a-4354bec9fc8a.mp4"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\d895e173-dc81-4516-adc6-7e0377d4fb76.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\d895e173-dc81-4516-adc6-7e0377d4fb76.png",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/d895e173-dc81-4516-adc6-7e0377d4fb76.png",
       "AssetKind": "All",
@@ -1841,10 +1879,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\d895e173-dc81-4516-adc6-7e0377d4fb76.png"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\daba26ca-8667-4d8b-95e9-75af1c3aafca.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\daba26ca-8667-4d8b-95e9-75af1c3aafca.png",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/daba26ca-8667-4d8b-95e9-75af1c3aafca.png",
       "AssetKind": "All",
@@ -1860,10 +1898,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\daba26ca-8667-4d8b-95e9-75af1c3aafca.png"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\db924224-c853-40ec-870b-35cd91944eb4.mp4",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\db924224-c853-40ec-870b-35cd91944eb4.mp4",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/db924224-c853-40ec-870b-35cd91944eb4.mp4",
       "AssetKind": "All",
@@ -1879,10 +1917,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\db924224-c853-40ec-870b-35cd91944eb4.mp4"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\dc8e74bc-74d5-49d4-91a4-b813f2f954e3.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\dc8e74bc-74d5-49d4-91a4-b813f2f954e3.png",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/dc8e74bc-74d5-49d4-91a4-b813f2f954e3.png",
       "AssetKind": "All",
@@ -1898,10 +1936,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\dc8e74bc-74d5-49d4-91a4-b813f2f954e3.png"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\df2080a0-0f06-4e0b-85fd-fca5cb5f2a31.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\df2080a0-0f06-4e0b-85fd-fca5cb5f2a31.png",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/df2080a0-0f06-4e0b-85fd-fca5cb5f2a31.png",
       "AssetKind": "All",
@@ -1917,10 +1955,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\df2080a0-0f06-4e0b-85fd-fca5cb5f2a31.png"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\e1cbf583-d3aa-44d7-8be4-ab55fb60a612.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\e1cbf583-d3aa-44d7-8be4-ab55fb60a612.png",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/e1cbf583-d3aa-44d7-8be4-ab55fb60a612.png",
       "AssetKind": "All",
@@ -1936,10 +1974,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\e1cbf583-d3aa-44d7-8be4-ab55fb60a612.png"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\e4fe6544-5741-4187-b4e4-2cca1b9ac510.mp4",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\e4fe6544-5741-4187-b4e4-2cca1b9ac510.mp4",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/e4fe6544-5741-4187-b4e4-2cca1b9ac510.mp4",
       "AssetKind": "All",
@@ -1955,10 +1993,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\e4fe6544-5741-4187-b4e4-2cca1b9ac510.mp4"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\e77de863-127e-4a60-a5c7-8e1c6892e01e.mp4",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\e77de863-127e-4a60-a5c7-8e1c6892e01e.mp4",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/e77de863-127e-4a60-a5c7-8e1c6892e01e.mp4",
       "AssetKind": "All",
@@ -1974,10 +2012,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\e77de863-127e-4a60-a5c7-8e1c6892e01e.mp4"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\e789c1bb-28f2-487a-9e83-4e9481c406eb.docx",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\e789c1bb-28f2-487a-9e83-4e9481c406eb.docx",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/e789c1bb-28f2-487a-9e83-4e9481c406eb.docx",
       "AssetKind": "All",
@@ -1993,10 +2031,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\e789c1bb-28f2-487a-9e83-4e9481c406eb.docx"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\ea1d2730-da27-420c-81d5-dd53ba6b01ab.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\ea1d2730-da27-420c-81d5-dd53ba6b01ab.png",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/ea1d2730-da27-420c-81d5-dd53ba6b01ab.png",
       "AssetKind": "All",
@@ -2012,10 +2050,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\ea1d2730-da27-420c-81d5-dd53ba6b01ab.png"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\edf411fd-b321-4f91-8ff0-30549e79f8f6.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\edf411fd-b321-4f91-8ff0-30549e79f8f6.png",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/edf411fd-b321-4f91-8ff0-30549e79f8f6.png",
       "AssetKind": "All",
@@ -2031,10 +2069,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\edf411fd-b321-4f91-8ff0-30549e79f8f6.png"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\edf59d64-189c-4a88-9626-701a4e824735.mp4",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\edf59d64-189c-4a88-9626-701a4e824735.mp4",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/edf59d64-189c-4a88-9626-701a4e824735.mp4",
       "AssetKind": "All",
@@ -2050,10 +2088,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\edf59d64-189c-4a88-9626-701a4e824735.mp4"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\ef486ff8-4fbe-4cb9-a9ee-92e3b7ae2252.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\ef486ff8-4fbe-4cb9-a9ee-92e3b7ae2252.png",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/ef486ff8-4fbe-4cb9-a9ee-92e3b7ae2252.png",
       "AssetKind": "All",
@@ -2069,10 +2107,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\ef486ff8-4fbe-4cb9-a9ee-92e3b7ae2252.png"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\eff85400-9eae-41ea-81f5-17c93c07079e.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\eff85400-9eae-41ea-81f5-17c93c07079e.png",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/eff85400-9eae-41ea-81f5-17c93c07079e.png",
       "AssetKind": "All",
@@ -2088,10 +2126,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\eff85400-9eae-41ea-81f5-17c93c07079e.png"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\f38cecab-9a72-47a3-8337-4c9dbe03ce14.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\f38cecab-9a72-47a3-8337-4c9dbe03ce14.png",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/f38cecab-9a72-47a3-8337-4c9dbe03ce14.png",
       "AssetKind": "All",
@@ -2107,10 +2145,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\f38cecab-9a72-47a3-8337-4c9dbe03ce14.png"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\f7cc16ef-e651-4fde-ba7e-dfcc3f4ffe82.mp4",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\f7cc16ef-e651-4fde-ba7e-dfcc3f4ffe82.mp4",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/f7cc16ef-e651-4fde-ba7e-dfcc3f4ffe82.mp4",
       "AssetKind": "All",
@@ -2126,10 +2164,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\f7cc16ef-e651-4fde-ba7e-dfcc3f4ffe82.mp4"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\f89e5294-66f8-4cc7-8cab-96998aa3d589.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\f89e5294-66f8-4cc7-8cab-96998aa3d589.png",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/f89e5294-66f8-4cc7-8cab-96998aa3d589.png",
       "AssetKind": "All",
@@ -2145,10 +2183,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\f89e5294-66f8-4cc7-8cab-96998aa3d589.png"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\fca3a842-19ae-4571-9605-2ee782627e34.mp4",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\fca3a842-19ae-4571-9605-2ee782627e34.mp4",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/fca3a842-19ae-4571-9605-2ee782627e34.mp4",
       "AssetKind": "All",
@@ -2164,10 +2202,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\fca3a842-19ae-4571-9605-2ee782627e34.mp4"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\fd3bec81-4dc6-4949-a79c-56753ecff4f9.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\fd3bec81-4dc6-4949-a79c-56753ecff4f9.png",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/fd3bec81-4dc6-4949-a79c-56753ecff4f9.png",
       "AssetKind": "All",
@@ -2183,10 +2221,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\fd3bec81-4dc6-4949-a79c-56753ecff4f9.png"
     },
     {
-      "Identity": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\Uploads\\fe78b22d-e231-4f12-a840-4977f7cfd0bb.png",
+      "Identity": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\Uploads\\fe78b22d-e231-4f12-a840-4977f7cfd0bb.png",
       "SourceId": "BMS_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project_API_DotNetCore\\bookmyskill-1\\wwwroot\\",
+      "ContentRoot": "E:\\Karan_Projects\\BMS_API\\BMS_API\\wwwroot\\",
       "BasePath": "_content/BMS_API",
       "RelativePath": "Uploads/fe78b22d-e231-4f12-a840-4977f7cfd0bb.png",
       "AssetKind": "All",
