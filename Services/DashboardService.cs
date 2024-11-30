@@ -629,6 +629,8 @@ namespace BMS_API.Services
             {
                 List<ConnectionUserDTO> suggestedUsers = new List<ConnectionUserDTO>();
 
+                string baseBannerUrl = "https://bookmyskills.co.in/Uploads/";
+
                 using (var command = _context.Database.GetDbConnection().CreateCommand())
                 {
                     command.CommandText = "uspGetSuggestedConnections";
@@ -649,7 +651,8 @@ namespace BMS_API.Services
                             {
                                 UserIDP = reader["UserIDP"] != DBNull.Value ? Convert.ToInt64(reader["UserIDP"]) : 0,
                                 FullName = reader["FullName"].ToString(),
-                                ProfileImage = reader["ProfileImage"].ToString()
+                                //ProfileImage = reader["ProfileImage"].ToString()
+                                ProfileImage = reader["ProfileImage"] != DBNull.Value ? baseBannerUrl + reader["ProfileImage"].ToString() : string.Empty,
                             };
                             suggestedUsers.Add(user);
                         }
