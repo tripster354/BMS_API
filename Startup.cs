@@ -69,6 +69,8 @@ namespace BudgetManagement
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IFeedService, FeedService>();
             services.AddScoped<IPostsService, PostService>();
+            services.AddScoped<IPostsService, PostService>();
+            services.AddScoped<IGalleryService, GalleryService>();
 
          //   services.AddMvcCore().AddApiExplorer();
 

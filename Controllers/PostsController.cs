@@ -155,6 +155,119 @@ namespace BMS_API.Controllers
         #endregion INSERT-UPDATE
 
 
+        #region LikeDislikePosts
+        [Route("LikeDislikePosts")]
+        [HttpPost]
+        public async Task<IActionResult> LikeDislikePosts(long PostID ,int LikeStatus)
+        {
+            GetAuth();
+            if (objUser == null) return BadRequest(authFail);
+            _PostsService.ObjUser = objUser;
+
+            try
+            {
+                if (PostID > 0 && LikeStatus == 1)
+                {
+                    dynamic response = await _PostsService.SetPostLikeStatus(PostID, LikeStatus);
+                    if (response == false)
+                    {
+                        return BadRequest(new { status = 201, data = "Can Not Proceed" });
+                    }
+                    return Ok(response);
+                }
+                else if (PostID > 0 && LikeStatus == 0)
+                {
+                    dynamic response = await _PostsService.DisLikePostStatus(PostID, LikeStatus);
+                    if (response == false)
+                    {
+                        return BadRequest(new { status = 201, data = "Can Not Proceed" });
+                    }
+                    return Ok(response);
+                }
+                else 
+                {
+                    return BadRequest(new { status = 201, data = "Can Not Proceed" });
+                }
+
+            }
+            catch (Exception e)
+            {
+                await _PostsService.ErrorLog(201, e.Message, $"Controller : LikeDislikePosts", 1);
+                return BadRequest(new { status = 0, data = 0, message = e.Message });
+            }
+        }
+        #endregion
+
+
+
+        #region AddCommentsBypost
+        [Route("AddCommentsBypost")]
+        [HttpPost]
+        public async Task<IActionResult> AddCommentsBypost(long PostID, string CommentText)
+        {
+            GetAuth();
+            if (objUser == null) return BadRequest(authFail);
+            _PostsService.ObjUser = objUser;
+
+            try
+            {
+                if (PostID > 0 && CommentText != null) 
+                {
+                    dynamic response = await _PostsService.InsCommentsBypost(PostID, CommentText);
+                    if (response == false)
+                    {
+                        return BadRequest(new { status = 201, data = "Can Not Proceed" });
+                    }
+                    return Ok(response);
+                }
+                else
+                {
+                    return BadRequest(new { status = 201, data = "Can Not Proceed" });
+                }
+            }
+            catch (Exception e)
+            {
+                await _PostsService.ErrorLog(201, e.Message, $"Controller : LikeDislikePosts", 1);
+                return BadRequest(new { status = 0, data = 0, message = e.Message });
+            }
+        }
+        #endregion
+
+
+        #region AddCommentsBypost
+        [Route("CommentsBypost")]
+        [HttpPost]
+        public async Task<IActionResult> CommentsBypost(long PostID)
+        {
+            GetAuth();
+            if (objUser == null) return BadRequest(authFail);
+            _PostsService.ObjUser = objUser;
+
+            try
+            {
+                if (PostID > 0)
+                {
+                    dynamic response = await _PostsService.GetPostsById(PostID);
+                    if (response == null)
+                    {
+                        return BadRequest(new { status = 201, data = "Can Not Proceed" });
+                    }
+                    return Ok(response);
+                }
+                else
+                {
+                    return BadRequest(new { status = 201, data = "Can Not Proceed" });
+                }
+            }
+            catch (Exception e)
+            {
+                await _PostsService.ErrorLog(201, e.Message, $"Controller : LikeDislikePosts", 1);
+                return BadRequest(new { status = 0, data = 0, message = e.Message });
+            }
+        }
+        #endregion
+
+
         #region Get-Posts
         [Route("Get-Posts")]
         [HttpPost]

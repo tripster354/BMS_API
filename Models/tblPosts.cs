@@ -21,9 +21,9 @@ namespace BMS_API.Models
         public long ActivityIDF { get; set; }
         public long UserIDF { get; set; }
         public string PostDescription { get; set; }
-        public int? Likes { get; set; }
-        public int? Dislikes { get; set; }
+        public int LikeStatus { get; set; }
         public DateTime? CreatedDate { get; set; }
         public string PostImage { get; set; }
+        public string Comments { get; set; }
     }
 }

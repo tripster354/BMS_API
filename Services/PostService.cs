@@ -11,6 +11,7 @@ using System;
 using System.Data.Common;
 using BMS_API.Models;
 using System.Globalization;
+using System.Linq.Expressions;
 
 namespace BMS_API.Services
 {
@@ -24,7 +25,7 @@ namespace BMS_API.Services
         public AuthorisedUser ObjUser { get; set; }
 
 
-        #region getActivityById
+        #region GetPostsById
         public async Task<tblPosts> GetPostsById(long PostID)
         {
             tblPosts Post = null;
@@ -57,8 +58,8 @@ namespace BMS_API.Services
                             UserIDF = reader["UserIDF"] != DBNull.Value ? (long)reader["UserIDF"] : 0, // Set the ActivityId
                             PostImage = !string.IsNullOrEmpty(PostImage) ? baseBannerUrl + PostImage : null,
                             PostDescription = reader["PostDescription"]?.ToString(),
-                            Likes = reader["Likes"] != DBNull.Value ? (int)reader["Likes"] : 0,
-                            Dislikes = reader["Dislikes"] != DBNull.Value ? (int)reader["Dislikes"] : 0,
+                            Comments = reader["Comments"]?.ToString(),
+                            LikeStatus = reader["LikeStatus"] != DBNull.Value ? (int)reader["Likes"] : 0,
                             CreatedDate = reader["CreatedDate"] != DBNull.Value ? (DateTime?)reader["CreatedDate"] : null,
  
                         };
@@ -68,6 +69,127 @@ namespace BMS_API.Services
 
             return Post;
         }
+        #endregion
+
+        #region Comments-By-post
+        public async Task<bool> InsCommentsBypost(long PostID, string CommentText)
+        {
+            try
+            {
+                using (var command = _context.Database.GetDbConnection().CreateCommand())
+                {
+
+                    command.CommandText = "Update tblPosts set Comments = @CommentText where PostID = @PostID";
+                    command.CommandType = System.Data.CommandType.Text;
+
+                    var PostIdParam = new SqlParameter("@PostID", System.Data.SqlDbType.BigInt)
+                    {
+                        Value = PostID
+                    };
+                    var CommentTextParam = new SqlParameter("@CommentText", System.Data.SqlDbType.NVarChar)
+                    {
+                        Value = CommentText
+                    };
+                    command.Parameters.Add(CommentTextParam);
+                    command.Parameters.Add(PostIdParam);
+
+                    await _context.Database.OpenConnectionAsync();
+
+                    int rowsAffected = await command.ExecuteNonQueryAsync();
+
+                    // Return true if at least one row was affected, otherwise false
+                    return rowsAffected > 0;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+
+        #endregion
+
+
+        #region SetPostLikeStatus
+        public async Task<bool> SetPostLikeStatus(long PostID, int LikeStatus)
+        {
+            try
+            {
+                using (var command = _context.Database.GetDbConnection().CreateCommand())
+                {
+
+                    command.CommandText = "Update tblPosts set LikeStatus = 1 where PostID = @PostID";
+                    command.CommandType = System.Data.CommandType.Text;
+
+                    var PostIdParam = new SqlParameter("@PostID", System.Data.SqlDbType.BigInt)
+                    {
+                        Value = PostID
+                    };
+                    var LikeStatusParam = new SqlParameter("@LikeStatus", System.Data.SqlDbType.Int)
+                    {
+                        Value = LikeStatus
+                    };
+                    command.Parameters.Add(LikeStatusParam);
+                    command.Parameters.Add(PostIdParam);
+
+                    await _context.Database.OpenConnectionAsync();
+
+                    int rowsAffected = await command.ExecuteNonQueryAsync();
+
+                    // Return true if at least one row was affected, otherwise false
+                    return rowsAffected > 0;
+                }
+
+            }
+            catch (Exception ex) 
+            {
+                throw ex;
+            }
+           
+        }
+
+        #endregion
+
+        #region SetPostLikeStatus
+        public async Task<bool> DisLikePostStatus(long PostID, int LikeStatus)
+        {
+            try
+            {
+                using (var command = _context.Database.GetDbConnection().CreateCommand())
+                {
+
+                    command.CommandText = "Update tblPosts set LikeStatus = 0 where PostID = @PostID";
+                    command.CommandType = System.Data.CommandType.Text;
+
+                    var PostIdParam = new SqlParameter("@PostID", System.Data.SqlDbType.BigInt)
+                    {
+                        Value = PostID
+                    };
+                    var LikeStatusParam = new SqlParameter("@LikeStatus", System.Data.SqlDbType.Int)
+                    {
+                        Value = LikeStatus
+                    };
+                    command.Parameters.Add(LikeStatusParam);
+                    command.Parameters.Add(PostIdParam);
+
+                    await _context.Database.OpenConnectionAsync();
+
+                    int rowsAffected = await command.ExecuteNonQueryAsync();
+
+                    // Return true if at least one row was affected, otherwise false
+                    return rowsAffected > 0;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+
         #endregion
 
 

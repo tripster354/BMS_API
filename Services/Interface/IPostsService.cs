@@ -10,5 +10,8 @@ namespace BMS_API.Services.Interface
         Task<Int64> Posts_Update(tblPosts modelActivity);
         Task<Int64> Posts_Insert(tblPosts modelActivity);
         Task<tblPosts> GetPostsById(long PostID);
+        Task<bool> SetPostLikeStatus(long PostID, int LikeStatus);
+        Task<bool> DisLikePostStatus(long PostID, int LikeStatus);
+        Task<bool> InsCommentsBypost(long PostID, string CommentText);
     }
 }
