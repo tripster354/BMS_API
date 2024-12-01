@@ -26,6 +26,6 @@
         public int? TotalClicks {  get; set; }
         public int? TotalFavourites {  get; set; }
         public int? TrendRank { get; set; }
-
+        public int? LikeStatus { get; set; }
     }
 }

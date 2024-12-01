@@ -5,7 +5,168 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project>
   <PropertyGroup>
     <_PublishTargetUrl>C:\Users\baps\Desktop\TestDeploy</_PublishTargetUrl>
-    <History>True|2024-11-28T23:10:05.5994104Z||;True|2024-11-29T00:43:56.6849207+05:30||;True|2024-11-28T09:35:15.5215231+05:30||;True|2024-11-28T01:09:08.7939179+05:30||;True|2024-11-28T01:01:11.7636874+05:30||;True|2024-11-27T20:37:40.7879168+05:30||;True|2024-11-24T15:33:20.0953511+05:30||;True|2024-11-24T15:13:52.8925385+05:30||;True|2024-11-24T14:37:10.2155488+05:30||;</History>
+    <History>True|2024-11-30T18:04:16.8407202Z||;True|2024-11-30T23:33:46.5983895+05:30||;True|2024-11-29T04:40:05.5994104+05:30||;True|2024-11-29T00:43:56.6849207+05:30||;True|2024-11-28T09:35:15.5215231+05:30||;True|2024-11-28T01:09:08.7939179+05:30||;True|2024-11-28T01:01:11.7636874+05:30||;True|2024-11-27T20:37:40.7879168+05:30||;True|2024-11-24T15:33:20.0953511+05:30||;True|2024-11-24T15:13:52.8925385+05:30||;True|2024-11-24T14:37:10.2155488+05:30||;</History>
     <LastFailureDetails />
   </PropertyGroup>
+  <ItemGroup>
+    <File Include="Services/AuthService.cs">
+      <publishTime>11/27/2024 20:13:54</publishTime>
+    </File>
+    <File Include="Services/BankServices.cs">
+      <publishTime>11/20/2024 21:57:11</publishTime>
+    </File>
+    <File Include="Services/BannerService.cs">
+      <publishTime>11/20/2024 21:57:11</publishTime>
+    </File>
+    <File Include="Services/CityServices.cs">
+      <publishTime>11/20/2024 21:57:11</publishTime>
+    </File>
+    <File Include="Services/CommonService.cs">
+      <publishTime>11/20/2024 21:57:11</publishTime>
+    </File>
+    <File Include="Services/CountryServices.cs">
+      <publishTime>11/20/2024 21:57:11</publishTime>
+    </File>
+    <File Include="Services/CouponService.cs">
+      <publishTime>11/20/2024 21:57:11</publishTime>
+    </File>
+    <File Include="Services/DashboardService.cs">
+      <publishTime>11/30/2024 17:54:44</publishTime>
+    </File>
+    <File Include="Services/EmailTemplateService.cs">
+      <publishTime>11/20/2024 21:57:11</publishTime>
+    </File>
+    <File Include="Services/FAQService.cs">
+      <publishTime>11/20/2024 21:57:11</publishTime>
+    </File>
+    <File Include="Services/FeedService.cs">
+      <publishTime>11/20/2024 21:57:11</publishTime>
+    </File>
+    <File Include="Services/InterestService.cs">
+      <publishTime>11/20/2024 21:57:11</publishTime>
+    </File>
+    <File Include="Services/Interface/IAuthService.cs">
+      <publishTime>11/20/2024 21:57:11</publishTime>
+    </File>
+    <File Include="Services/Interface/IBannerService.cs">
+      <publishTime>11/20/2024 21:57:11</publishTime>
+    </File>
+    <File Include="Services/Interface/ICityServices.cs">
+      <publishTime>11/20/2024 21:57:11</publishTime>
+    </File>
+    <File Include="Services/Interface/ICommon.cs">
+      <publishTime>11/20/2024 21:57:11</publishTime>
+    </File>
+    <File Include="Services/Interface/ICouponService.cs">
+      <publishTime>11/20/2024 21:57:11</publishTime>
+    </File>
+    <File Include="Services/Interface/IDashboardService.cs">
+      <publishTime>11/30/2024 16:55:41</publishTime>
+    </File>
+    <File Include="Services/Interface/IEmailTemplateService.cs">
+      <publishTime>11/20/2024 21:57:11</publishTime>
+    </File>
+    <File Include="Services/Interface/IFAQService.cs">
+      <publishTime>11/20/2024 21:57:11</publishTime>
+    </File>
+    <File Include="Services/Interface/IFeedService.cs">
+      <publishTime>11/20/2024 21:57:11</publishTime>
+    </File>
+    <File Include="Services/Interface/IInterestService.cs">
+      <publishTime>11/20/2024 21:57:11</publishTime>
+    </File>
+    <File Include="Services/Interface/IPageMenuService.cs">
+      <publishTime>11/20/2024 21:57:11</publishTime>
+    </File>
+    <File Include="Services/Interface/IPollService.cs">
+      <publishTime>11/20/2024 21:57:11</publishTime>
+    </File>
+    <File Include="Services/Interface/IPostsService.cs">
+      <publishTime>11/30/2024 18:24:44</publishTime>
+    </File>
+    <File Include="Services/Interface/IRoleService.cs">
+      <publishTime>11/20/2024 21:57:11</publishTime>
+    </File>
+    <File Include="Services/Interface/ISettingsService.cs">
+      <publishTime>11/20/2024 21:57:11</publishTime>
+    </File>
+    <File Include="Services/Interface/IStateServices.cs">
+      <publishTime>11/20/2024 21:57:11</publishTime>
+    </File>
+    <File Include="Services/Interface/ISubAdminService.cs">
+      <publishTime>11/20/2024 21:57:11</publishTime>
+    </File>
+    <File Include="Services/Interface/ISubscriptionService.cs">
+      <publishTime>11/20/2024 21:57:11</publishTime>
+    </File>
+    <File Include="Services/Interface/ITicketIssueTypeService.cs">
+      <publishTime>11/20/2024 21:57:11</publishTime>
+    </File>
+    <File Include="Services/Interface/IUserManagement.cs">
+      <publishTime>11/24/2024 14:07:53</publishTime>
+    </File>
+    <File Include="Services/Interface/lBankServices.cs">
+      <publishTime>11/20/2024 21:57:11</publishTime>
+    </File>
+    <File Include="Services/Interface/lCountryServices.cs">
+      <publishTime>11/20/2024 21:57:11</publishTime>
+    </File>
+    <File Include="Services/Interface/Partner/IActivityService.cs">
+      <publishTime>11/28/2024 00:44:45</publishTime>
+    </File>
+    <File Include="Services/Interface/Partner/ItblPartnerService.cs">
+      <publishTime>11/20/2024 21:57:11</publishTime>
+    </File>
+    <File Include="Services/Interface/User/IClubService.cs">
+      <publishTime>11/20/2024 21:57:11</publishTime>
+    </File>
+    <File Include="Services/Interface/User/ItblUserService.cs">
+      <publishTime>11/20/2024 21:57:11</publishTime>
+    </File>
+    <File Include="Services/Interface/User/IUserService.cs">
+      <publishTime>11/20/2024 21:57:11</publishTime>
+    </File>
+    <File Include="Services/PageMenuService.cs">
+      <publishTime>11/20/2024 21:57:11</publishTime>
+    </File>
+    <File Include="Services/Partner/ActivityService.cs">
+      <publishTime>11/30/2024 16:59:10</publishTime>
+    </File>
+    <File Include="Services/Partner/tblPartnerService.cs">
+      <publishTime>11/20/2024 21:57:11</publishTime>
+    </File>
+    <File Include="Services/PollService.cs">
+      <publishTime>11/20/2024 21:57:11</publishTime>
+    </File>
+    <File Include="Services/RoleService.cs">
+      <publishTime>11/20/2024 21:57:11</publishTime>
+    </File>
+    <File Include="Services/SettingsService.cs">
+      <publishTime>11/20/2024 21:57:11</publishTime>
+    </File>
+    <File Include="Services/StateServices.cs">
+      <publishTime>11/20/2024 21:57:11</publishTime>
+    </File>
+    <File Include="Services/SubAdminService.cs">
+      <publishTime>11/20/2024 21:57:11</publishTime>
+    </File>
+    <File Include="Services/SubscriptionService.cs">
+      <publishTime>11/20/2024 21:57:11</publishTime>
+    </File>
+    <File Include="Services/TicketIssueTypeService.cs">
+      <publishTime>11/20/2024 21:57:11</publishTime>
+    </File>
+    <File Include="Services/User/ClubService.cs">
+      <publishTime>11/20/2024 21:57:11</publishTime>
+    </File>
+    <File Include="Services/User/tblUserService.cs">
+      <publishTime>11/20/2024 21:57:11</publishTime>
+    </File>
+    <File Include="Services/UserManagementService.cs">
+      <publishTime>11/24/2024 15:32:14</publishTime>
+    </File>
+    <File Include="Services/UserService.cs">
+      <publishTime>11/20/2024 21:57:11</publishTime>
+    </File>
+  </ItemGroup>
 </Project>

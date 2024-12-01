@@ -326,6 +326,7 @@ namespace BMS_API.Services.Partner
         //}
         #endregion Activity GET_ALL
 
+
         #region Activity GET_ALL By user
         public async Task<string> Activity_GetAll_ByUser(SearchWithDisplayTypeWithInterest param)
         {

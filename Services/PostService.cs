@@ -1,0 +1,196 @@
+﻿using BMS_API.Models.DTOs;
+using BMS_API.Services.Interface;
+using BudgetManagement.Models;
+using BudgetManagement.Services;
+using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+using System.Data;
+using System.Threading.Tasks;
+using System;
+using System.Data.Common;
+using BMS_API.Models;
+using System.Globalization;
+
+namespace BMS_API.Services
+{
+
+    public class PostService : CommonService, IPostsService
+    {
+        public PostService(BMSContext context) : base(context)
+        {
+            _context = context;
+        }
+        public AuthorisedUser ObjUser { get; set; }
+
+
+        #region getActivityById
+        public async Task<tblPosts> GetPostsById(long PostID)
+        {
+            tblPosts Post = null;
+
+            using (var command = _context.Database.GetDbConnection().CreateCommand())
+            {
+                command.CommandText = "select * from tblPosts where PostID = @PostID";
+                command.CommandType = System.Data.CommandType.Text;
+
+                var PostIdParam = new SqlParameter("@PostID", System.Data.SqlDbType.BigInt)
+                {
+                    Value = PostID
+                };
+                command.Parameters.Add(PostIdParam);
+
+                _context.Database.OpenConnection();
+
+                using (var reader = await command.ExecuteReaderAsync())
+                {
+                    if (reader.HasRows && await reader.ReadAsync())
+                    {
+                        string baseBannerUrl = "https://bookmyskills.co.in/Uploads/";
+                        string PostImage = reader["PostImage"]?.ToString();
+
+                        Post = new tblPosts
+                        {
+
+                            PostID = reader["PostID"] != DBNull.Value ? (long)reader["PostID"] : 0, // Set the ActivityId
+                            ActivityIDF = reader["ActivityIDF"] != DBNull.Value ? (long)reader["ActivityIDF"] : 0, // Set the ActivityId
+                            UserIDF = reader["UserIDF"] != DBNull.Value ? (long)reader["UserIDF"] : 0, // Set the ActivityId
+                            PostImage = !string.IsNullOrEmpty(PostImage) ? baseBannerUrl + PostImage : null,
+                            PostDescription = reader["PostDescription"]?.ToString(),
+                            Likes = reader["Likes"] != DBNull.Value ? (int)reader["Likes"] : 0,
+                            Dislikes = reader["Dislikes"] != DBNull.Value ? (int)reader["Dislikes"] : 0,
+                            CreatedDate = reader["CreatedDate"] != DBNull.Value ? (DateTime?)reader["CreatedDate"] : null,
+ 
+                        };
+                    }
+                }
+            }
+
+            return Post;
+        }
+        #endregion
+
+
+
+        #region POst INSERT
+        public async Task<Int64> Posts_Insert(tblPosts modelActivity)
+        {
+            try
+            {
+                SqlParameter PostID = new SqlParameter
+                {
+                    ParameterName = "@PostID",
+                    SqlDbType = System.Data.SqlDbType.BigInt,
+                    Direction = System.Data.ParameterDirection.Output
+                };
+                SqlParameter paramActivityIDF = new SqlParameter("@ActivityIDF", (object)modelActivity.ActivityIDF ?? DBNull.Value);
+                SqlParameter paramUserIDF = new SqlParameter("@UserIDF", ObjUser.UserID);
+                SqlParameter paramPostDescription = new SqlParameter("@PostDescription", (object)modelActivity.PostDescription ?? DBNull.Value);
+                SqlParameter paramCreatedDate = new SqlParameter("@CreatedDate", (object)modelActivity.CreatedDate ?? DBNull.Value);
+                SqlParameter paramPostImage = new SqlParameter("@PostImage", (object)modelActivity.PostImage ?? DBNull.Value);
+
+
+                var paramSqlQuery = "EXECUTE dbo.InsertUpdatePosts @PostID OUTPUT, @ActivityIDF, @UserIDF, @PostDescription, @CreatedDate, @PostImage";
+                await _context.Database.ExecuteSqlRawAsync(paramSqlQuery, PostID, paramActivityIDF, paramUserIDF, paramPostDescription, paramCreatedDate, paramPostImage);
+
+                return Convert.ToInt64(PostID.Value);
+
+            }
+            catch (Exception e)
+            {
+                await ErrorLog(1, e.Message, $"uspPosts_Insert_Update", 1);
+                return 0;
+            }
+        }
+        #endregion POst Insert
+
+
+        #region POst UPDATE
+        public async Task<Int64> Posts_Update(tblPosts modelActivity)
+        {
+            try
+            {
+
+                SqlParameter paramPostID = new SqlParameter("@PostID", (object)modelActivity.PostID ?? DBNull.Value);
+                SqlParameter paramActivityIDF = new SqlParameter("@ActivityIDF", (object)modelActivity.ActivityIDF ?? DBNull.Value);
+                SqlParameter paramUserIDF = new SqlParameter("@UserIDF", ObjUser.UserID);
+                SqlParameter paramPostDescription = new SqlParameter("@PostDescription", (object)modelActivity.PostDescription ?? DBNull.Value);
+                SqlParameter paramCreatedDate = new SqlParameter("@CreatedDate", (object)modelActivity.CreatedDate ?? DBNull.Value);
+                SqlParameter paramPostImage = new SqlParameter("@PostImage", (object)modelActivity.PostImage ?? DBNull.Value);
+                
+
+                var paramSqlQuery = "EXECUTE dbo.InsertUpdatePosts @PostID, @ActivityIDF, @UserIDF, @PostDescription, @CreatedDate, @PostImage";
+                await _context.Database.ExecuteSqlRawAsync(paramSqlQuery, paramPostID, paramActivityIDF, paramUserIDF, paramPostDescription, paramCreatedDate, paramPostImage);
+
+                return 0;
+
+            }
+            catch (Exception e)
+            {
+                await ErrorLog(1, e.Message, $"uspPosts_Insert_Update", 1);
+                return 0;
+            }
+        }
+        #endregion POst UPDATE
+
+
+        #region Get PostsAsync
+        public async Task<object> GetPostsAsync(Int64 UserId)
+        {
+            try
+            {
+                string baseBannerUrl = "https://bookmyskills.co.in/Uploads/";
+
+                List<Posts> trendingSkills = new List<Posts>();
+
+                using (var command = _context.Database.GetDbConnection().CreateCommand())
+                {
+                    command.CommandText = "[GetPosts]";
+                    command.CommandType = System.Data.CommandType.StoredProcedure;
+                    command.Parameters.Add(new SqlParameter()
+                    {
+                        ParameterName = "@UserId",
+                        SqlDbType = SqlDbType.BigInt,
+                        Value = UserId
+                    });
+
+                    _context.Database.OpenConnection();
+
+                    using (var reader = await command.ExecuteReaderAsync())
+                    {
+
+                        while (await reader.ReadAsync())
+                        {
+                            var trendingSkill = new Posts
+                            {
+
+                                PostID = (int)(reader["PostID"] != DBNull.Value ? Convert.ToInt32(reader["PostID"]) : (int?)0),
+                                LikeStatus = (int)(reader["LikeStatus"] != DBNull.Value ? Convert.ToInt32(reader["LikeStatus"]) : (int?)0),
+                                PostImage = reader["PostImage"] != DBNull.Value ? baseBannerUrl + reader["PostImage"].ToString() : string.Empty,
+                                SkillName = reader["SkillName"].ToString(),
+                                PostDescription = reader["PostDescription"].ToString(),
+                            };
+
+                            trendingSkills.Add(trendingSkill);
+                        }
+                    }
+
+                    var response = new
+                    {
+                        status = 200,
+                        data = trendingSkills
+                    };
+
+                    return response;
+                }
+            }
+            catch (Exception e)
+            {
+                await ErrorLog(1, e.Message, $"Posts", 1);
+                return "Error, something went wrong!";
+            }
+        }
+
+        #endregion
+    }
+}

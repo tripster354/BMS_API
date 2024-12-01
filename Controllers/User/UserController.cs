@@ -12,7 +12,10 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.Internal;
+using Microsoft.Extensions.Hosting;
 using System;
+using System.IO;
+using System.Net.Http.Headers;
 using System.Threading.Tasks;
 
 namespace BMS_API.Controllers.User
@@ -23,6 +26,8 @@ namespace BMS_API.Controllers.User
     {
         private readonly IUserService _userService;
         private readonly IWebHostEnvironment webHostEnvironment;
+
+
         public UserController(BMSContext context, IUserService userService, IAuthService authService, IWebHostEnvironment webHostEnvironment) : base(context, authService)
         {
             _context = context;
@@ -32,11 +37,69 @@ namespace BMS_API.Controllers.User
         #region Create-User
         [HttpPost]
         [Route("create-user")]
-        public async Task<ActionResult> CreateUser(tblUser user)
+        public async Task<ActionResult> CreateUser([FromForm] tblUserRequestModel user)
         {
             try
             {
-                var newUser = await _userService.CreateUserAsync(user);
+                string fileName = null;
+
+                foreach (IFormFile source in user.ProfileImage)
+                {
+                    // Get original file name to get the extension from it.
+                    string orgFileName = ContentDispositionHeaderValue.Parse(source.ContentDisposition).FileName;
+
+                    // Create a new file name to avoid existing files on the server with the same names.
+                    // fileName = DateTime.Now.ToFileTime() + Path.GetExtension(orgFileName);
+                    fileName = DateTime.Now.Second + orgFileName;
+
+
+                    string fullPath = GetFullPathOfFile(fileName.Replace("\"", ""));
+
+                    // Create the directory.
+                    Directory.CreateDirectory(Directory.GetParent(fullPath).FullName);
+
+                    // Save the file to the server.
+                    await using FileStream output = System.IO.File.Create(fullPath);
+                    await source.CopyToAsync(output);
+                }
+
+                var response = new { FileName = fileName.Replace("\"", "") };
+
+
+
+                tblUser tableUser = new tblUser();
+                tableUser.RowGUID = user.RowGUID;
+                tableUser.UserIDP = user.UserIDP;
+                tableUser.FirstName = user.FirstName;
+                tableUser.LastName = user.LastName;
+                tableUser.FullName = user.FullName;
+                tableUser.MobileNo = user.MobileNo;
+                tableUser.EmailID = user.EmailID;
+                tableUser.Password = user.Password;
+                tableUser.ProfileImage = response.FileName;
+                tableUser.Address = user.Address;
+                tableUser.RegistrationDate = user.RegistrationDate;
+                tableUser.SocialGoogle = user.SocialGoogle;
+                tableUser.SocialFacebook = user.SocialFacebook;
+                tableUser.SocialLinkedIn = user.SocialLinkedIn;
+                tableUser.SocialInstagram = user.SocialInstagram;
+                tableUser.SocialTweeter = user.SocialTweeter;
+                tableUser.SocialTelegram = user.SocialTelegram;
+                tableUser.SocialOther = user.SocialOther;
+                tableUser.AboutMe = user.AboutMe;
+                tableUser.TotalFollowers = user.TotalFollowers;
+                tableUser.TotalConnection = user.TotalConnection;
+                tableUser.RefrenceLink = user.RefrenceLink;
+                tableUser.RefrenceLinkUsed = user.RefrenceLinkUsed;
+                tableUser.IsActive = user.IsActive;
+                tableUser.OTP = user.OTP;
+                tableUser.LoginToken = user.LoginToken;
+                tableUser.InterestIDs = user.InterestIDs;
+                tableUser.EntryBy = user.EntryBy;
+                tableUser.EntryDate = user.EntryDate;
+                tableUser.IsDeleted = user.IsDeleted;
+
+                var newUser = await _userService.CreateUserAsync(tableUser);
 
                 if (newUser == null)
                 {
@@ -63,10 +126,16 @@ namespace BMS_API.Controllers.User
             }
         }
 
-#endregion CreateUser
 
-#region Gell-All-Users
-[HttpPost]
+        #endregion CreateUser
+
+        private string GetFullPathOfFile(string fileName)
+        {
+            return $"{this.webHostEnvironment.WebRootPath}\\Uploads\\{fileName}";
+        }
+
+        #region Gell-All-Users
+        [HttpPost]
         [Route("user-get-all")]
         public async Task<ActionResult> GetAllUsers()
         {
@@ -123,7 +192,7 @@ namespace BMS_API.Controllers.User
         #region Update-User
         [HttpPost]
         [Route("user-update/{id}")]
-        public async Task<ActionResult> UpdateUser(int id, [FromBody] tblUser user)
+        public async Task<ActionResult> UpdateUser(int id, [FromBody] tblUserRequestModel user)
         {
             try
             {
@@ -136,7 +205,68 @@ namespace BMS_API.Controllers.User
                 {
                     return BadRequest(new { status = 0, data = 0, message = "User Id mismatch" });
                 }
-                await _userService.UpdateUserAsync(id, user);
+
+                string fileName = null;
+
+                foreach (IFormFile source in user.ProfileImage)
+                {
+                    // Get original file name to get the extension from it.
+                    string orgFileName = ContentDispositionHeaderValue.Parse(source.ContentDisposition).FileName;
+
+                    // Create a new file name to avoid existing files on the server with the same names.
+                    // fileName = DateTime.Now.ToFileTime() + Path.GetExtension(orgFileName);
+                    fileName = DateTime.Now.Second + orgFileName;
+
+
+                    string fullPath = GetFullPathOfFile(fileName.Replace("\"", ""));
+
+                    // Create the directory.
+                    Directory.CreateDirectory(Directory.GetParent(fullPath).FullName);
+
+                    // Save the file to the server.
+                    await using FileStream output = System.IO.File.Create(fullPath);
+                    await source.CopyToAsync(output);
+                }
+
+                var response = new { FileName = fileName.Replace("\"", "") };
+
+
+
+                tblUser tableUser = new tblUser();
+                tableUser.RowGUID = user.RowGUID;
+                tableUser.UserIDP = user.UserIDP;
+                tableUser.FirstName = user.FirstName;
+                tableUser.LastName = user.LastName;
+                tableUser.FullName = user.FullName;
+                tableUser.MobileNo = user.MobileNo;
+                tableUser.EmailID = user.EmailID;
+                tableUser.Password = user.Password;
+                tableUser.ProfileImage = response.FileName;
+                tableUser.Address = user.Address;
+                tableUser.RegistrationDate = user.RegistrationDate;
+                tableUser.SocialGoogle = user.SocialGoogle;
+                tableUser.SocialFacebook = user.SocialFacebook;
+                tableUser.SocialLinkedIn = user.SocialLinkedIn;
+                tableUser.SocialInstagram = user.SocialInstagram;
+                tableUser.SocialTweeter = user.SocialTweeter;
+                tableUser.SocialTelegram = user.SocialTelegram;
+                tableUser.SocialOther = user.SocialOther;
+                tableUser.AboutMe = user.AboutMe;
+                tableUser.TotalFollowers = user.TotalFollowers;
+                tableUser.TotalConnection = user.TotalConnection;
+                tableUser.RefrenceLink = user.RefrenceLink;
+                tableUser.RefrenceLinkUsed = user.RefrenceLinkUsed;
+                tableUser.IsActive = user.IsActive;
+                tableUser.OTP = user.OTP;
+                tableUser.LoginToken = user.LoginToken;
+                tableUser.InterestIDs = user.InterestIDs;
+                tableUser.EntryBy = user.EntryBy;
+                tableUser.EntryDate = user.EntryDate;
+                tableUser.IsDeleted = user.IsDeleted;
+
+
+
+                await _userService.UpdateUserAsync(id, tableUser);
 
 
                 return Ok(new { status = 1, data = 0, message = "User updated successfully" });

@@ -26,7 +26,7 @@ namespace BMS_API.Services.Interface
         Task<List<FollowerDTO>> GetFollowerListAsync(long userId); 
         Task<List<ConnectionUserDTO>> GetSuggestedConnectionsAsync(long userId);
         Task<string> FollowUnfollowUserAsync(long userId, long followedUserId, int actionType);
-
+        Task<object> SkillsDetailsAsync(Int64 UserId);
         public Task<(IEnumerable<ParticipentInfoDTO> Participants, int TotalBookings, int TotalActivities, int TotalPartners)> GetParticipantInfoAsync();
 
     }

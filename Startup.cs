@@ -68,6 +68,7 @@ namespace BudgetManagement
             services.AddScoped<IClubService, ClubService>();
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IFeedService, FeedService>();
+            services.AddScoped<IPostsService, PostService>();
 
          //   services.AddMvcCore().AddApiExplorer();
 

@@ -7,5 +7,6 @@ namespace BMS_API.Models.DTOs
         public long UserIDP {  get; set; }
         public string FullName {  get; set; }
         public string ProfileImage { get; set; }
+        public int IsFollowing { get; set; }
     }
 }
