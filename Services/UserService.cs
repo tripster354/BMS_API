@@ -142,6 +142,86 @@ namespace BMS_API.Services
 
         #endregion
 
+
+        #region user-Profile
+        public async Task<IEnumerable<UserProfile>> GetUserProfileAsync(int UserId)
+        {
+            List<UserProfile> userReviews = new List<UserProfile>();
+            try
+            {
+                using (var command = _context.Database.GetDbConnection().CreateCommand())
+                {
+                    command.CommandText = "UserProfile";
+                    command.CommandType = System.Data.CommandType.StoredProcedure;
+                    command.Parameters.Add(new SqlParameter { ParameterName = "@ID", SqlDbType = SqlDbType.Int, Value = UserId });
+
+                    await _context.Database.OpenConnectionAsync();
+
+                    using (var reader = await command.ExecuteReaderAsync())
+                    {
+                        while (await reader.ReadAsync())
+                        {
+                            userReviews.Add(new UserProfile
+                            {
+                                UserId = Convert.ToInt32(reader["USERID"]),
+                                ProfileImage = Convert.ToString(reader["PROFILEIMAGE"]),
+                                SkillNumber = reader["SKILLNUMBER"].ToString(),
+                                TotalFollower = reader["TOTALFOLLOWERS"].ToString(),
+                                UserName = reader["FULLNAME"].ToString(),
+                                Description = Convert.ToString(reader["DESCRIPTION"]),
+                                Location = Convert.ToString(reader["LOCATION"]),
+                            });
+                        }
+                    }
+                    return userReviews;
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"Error in GetReviewsAsync: {ex.Message}");
+                throw;
+            }
+        }
+        #endregion
+
+
+        #region user-Interest
+        public async Task<IEnumerable<UserInterest>> GetUserInterestAsync(long UserId)
+        {
+            List<UserInterest> userReviews = new List<UserInterest>();
+            try
+            {
+                using (var command = _context.Database.GetDbConnection().CreateCommand())
+                {
+                    command.CommandText = "UserInterest";
+                    command.CommandType = System.Data.CommandType.StoredProcedure;
+
+                    await _context.Database.OpenConnectionAsync();
+
+                    using (var reader = await command.ExecuteReaderAsync())
+                    {
+                        while (await reader.ReadAsync())
+                        {
+                            userReviews.Add(new UserInterest
+                            {
+                                InterestId = Convert.ToString(reader["INTERESTIDP"]),
+                                InterestImage = Convert.ToString(reader["INTERESTIMAGE"]),
+                                InterestName = Convert.ToString(reader["INTERESTNAME"]),
+                            });
+                        }
+                    }
+                    return userReviews;
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"Error in GetReviewsAsync: {ex.Message}");
+                throw;
+            }
+        }
+        #endregion
+
+
         #region Gell-All-Users
         public async Task<string> GetAllUsersAsync()
         {

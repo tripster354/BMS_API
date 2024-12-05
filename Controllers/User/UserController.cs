@@ -134,6 +134,62 @@ namespace BMS_API.Controllers.User
             return $"{this.webHostEnvironment.WebRootPath}\\Uploads\\{fileName}";
         }
 
+        #region User Profile
+        [HttpGet]
+        [Route("User-Profile")]
+        public async Task<IActionResult> UserProfile(int UserId)
+        {
+            GetAuth();
+            if (objUser == null)
+            {
+                return BadRequest(authFail);
+            }
+
+            try
+            {
+                var reviews = await _userService.GetUserProfileAsync(UserId);
+                if (reviews == null || !reviews.Any())
+                {
+                    return Ok(new { status = 1, data = reviews, message = "No reviews found" });
+                }
+                return Ok(new { status = 1, data = reviews, message = "User Profile successfully" });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { status = 0, data = 0, message = ex.Message });
+            }
+        }
+        #endregion
+
+
+        #region User Interest
+        [HttpGet]
+        [Route("User-Interest")]
+        public async Task<IActionResult> UserInterest()
+        {
+            GetAuth();
+            if (objUser == null)
+            {
+                return BadRequest(authFail);
+            }
+
+            try
+            {
+                var reviews = await _userService.GetUserInterestAsync(objUser.UserID);
+                if (reviews == null || !reviews.Any())
+                {
+                    return Ok(new { status = 1, data = reviews, message = "No reviews found" });
+                }
+                return Ok(new { status = 1, data = reviews, message = "User Interest successfully" });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { status = 0, data = 0, message = ex.Message });
+            }
+        }
+        #endregion
+
+
         #region Gell-All-Users
         [HttpPost]
         [Route("user-get-all")]

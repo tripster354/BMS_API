@@ -15,6 +15,8 @@ namespace BMS_API.Services.Interface.User
         Task DeleteUserAsync(int id);
         Task<IEnumerable<UserReviewDTO>> GetUserReviewsAsync(int activityId);
         Task<bool> UpdateUserProfileAsync(UserProfileDTO userProfileDTO);
+        Task<IEnumerable<UserProfile>> GetUserProfileAsync(int UserId);
+        Task<IEnumerable<UserInterest>> GetUserInterestAsync(long UserId);
 
     }
 }
