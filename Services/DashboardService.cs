@@ -134,6 +134,8 @@ namespace BMS_API.Services
                         {
                             var trendingSkill = new SkillDetails
                             {
+                                CategoryID = (int)(reader["CategoryID"] != DBNull.Value ? Convert.ToInt32(reader["CategoryID"]) : (int?)0),
+                                CategoryName = reader["CategoryName"].ToString(),
                                 LikeStatus = (int)(reader["LikeStatus"] != DBNull.Value ? Convert.ToInt32(reader["LikeStatus"]) : (int?)0),
                                 ProfileImage = reader["ProfileImage"] != DBNull.Value ? baseBannerUrl + reader["ProfileImage"].ToString() : string.Empty,
                                 SkillName = reader["SkillName"].ToString(),
@@ -510,11 +512,13 @@ namespace BMS_API.Services
                         while (await reader.ReadAsync())
                         {
                             var offer = new SuggestedOffersDTO
-                            {
+                            {  
+                                SkillId = reader["SkillId"] != DBNull.Value ? Convert.ToInt64(reader["SkillId"]) : 0,
                                 OfferCoverImage = reader["OfferCoverImage"] != DBNull.Value ? reader["OfferCoverImage"].ToString() : string.Empty,
                                 OfferPercentage = reader["OfferPercentage"] != DBNull.Value ? reader["OfferPercentage"].ToString() : string.Empty,
                                 Title = reader["Title"] != DBNull.Value ? reader["Title"].ToString() : string.Empty,
                                 DateTime = reader["DateTime"] != DBNull.Value ? reader["DateTime"].ToString() : string.Empty,
+                                Date = reader["Date"] != DBNull.Value ? reader["Date"].ToString() : string.Empty,
                                 ProfileImage = reader["ProfileImage"] != DBNull.Value ? reader["ProfileImage"].ToString() : string.Empty,
                                 Name = reader["Name"] != DBNull.Value ? reader["Name"].ToString() : string.Empty
                             };
@@ -555,6 +559,7 @@ namespace BMS_API.Services
                         {
                             var teacher = new TrendingTeachersDTO
                             {
+                                SkillID = reader["SkillID"] != DBNull.Value ? Convert.ToInt64(reader["SkillID"]) : 0,
                                 TeacherId = reader["TeacherID"] != DBNull.Value ? Convert.ToInt64(reader["TeacherID"]) : 0,
                                 ProfileImage = reader["ProfileImage"] != DBNull.Value ? baseBannerUrl + reader["ProfileImage"].ToString() : string.Empty,
                                 FirstName = reader["FirstName"] != DBNull.Value ? reader["FirstName"].ToString() : string.Empty,

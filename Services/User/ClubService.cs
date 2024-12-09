@@ -48,9 +48,9 @@ namespace BMS_API.Services.User
                 SqlParameter paramClubBanner = new SqlParameter("@ClubBanner", (object)modelClub.ClubBanner ?? DBNull.Value);
                 SqlParameter paramClubVenue = new SqlParameter("@ClubVenue", (object)modelClub.ClubVenue ?? DBNull.Value);
                 SqlParameter paramClubDescription = new SqlParameter("@ClubDescription", (object)modelClub.ClubDescription ?? DBNull.Value);
-                SqlParameter paramEntryBy = new SqlParameter("@EntryBy", ObjUser.UserID);
+                SqlParameter paramEntryBy = new SqlParameter("@EntryBy", Convert.ToInt32(ObjUser.UserID));
 
-                var paramSqlQuery = "EXECUTE dbo.uspClub_Insert @ClubIDP OUTPUT, @UserIDF, @InterestIDF, @ClubName, @ClubBanner,  @ClubVenue, @ClubDescription @EntryBy";
+                var paramSqlQuery = "EXECUTE dbo.uspClub_Insert @ClubIDP OUTPUT, @UserIDF, @InterestIDF, @ClubName, @ClubBanner,  @ClubVenue, @ClubDescription, @EntryBy";
                 await _context.Database.ExecuteSqlRawAsync(paramSqlQuery, paramClubIDP, paramUserIDF, paramInterestIDF, paramClubName, paramClubBanner, paramClubVenue, paramClubDescription, paramEntryBy);
 
                 return Convert.ToInt64(paramClubIDP.Value);
@@ -62,7 +62,43 @@ namespace BMS_API.Services.User
                 return 0;
             }
         }
-        #endregion Club INSERT
+        #endregion Subscribe_Club 
+
+
+        #region Club INSERT
+        public async Task<Int64> Subscribe_Club(SubscribeClub Entity)
+        {
+            try
+            {
+                SqlParameter paramClubSubscriptionIDP = new SqlParameter
+                {
+                    ParameterName = "@ClubSubscriptionIDP",
+                    SqlDbType = System.Data.SqlDbType.BigInt,
+                    Direction = System.Data.ParameterDirection.Output
+                };
+                SqlParameter paramUserIDF = new SqlParameter("@UserIDF", ObjUser.UserID);
+                SqlParameter paramPartnerIDF = new SqlParameter("@PartnerIDF", (object)Entity.PartnerIDF ?? DBNull.Value);
+                SqlParameter paramClubIDF = new SqlParameter("@ClubIDF", (object)Entity.ClubIDF ?? DBNull.Value);
+                SqlParameter paramIsPaid = new SqlParameter("@IsPaid", (object)Entity.IsPaid ?? DBNull.Value);
+                SqlParameter paramSubscriptionDate = new SqlParameter("@SubscriptionDate", (object)Entity.SubscriptionDate ?? DBNull.Value);
+                SqlParameter paramIsDeleted = new SqlParameter("@IsDeleted", (object)Entity.IsDeleted ?? DBNull.Value);
+                SqlParameter paramEntryBy = new SqlParameter("@EntryBy", Convert.ToInt32(ObjUser.UserID));
+                SqlParameter paramEntryDate = new SqlParameter("@EntryDate", DateTime.Now);
+
+                var paramSqlQuery = "EXECUTE dbo.uspClub_Subscribe @ClubSubscriptionIDP OUTPUT, @UserIDF, @PartnerIDF, @ClubIDF, @IsPaid,  @SubscriptionDate, @IsDeleted, @EntryBy, @EntryDate";
+                await _context.Database.ExecuteSqlRawAsync(paramSqlQuery, paramClubSubscriptionIDP, paramUserIDF, paramPartnerIDF, paramClubIDF, paramIsPaid, paramSubscriptionDate, paramIsDeleted, paramEntryBy, paramEntryDate);
+
+                return Convert.ToInt64(paramClubSubscriptionIDP.Value);
+
+            }
+            catch (Exception e)
+            {
+                await ErrorLog(1, e.Message, $"uspClub_Insert", 1);
+                return 0;
+            }
+        }
+        #endregion Subscribe_Club
+
 
 
         #region Club UPDATE
@@ -93,6 +129,52 @@ namespace BMS_API.Services.User
             }
         }
         #endregion Club UPDATE
+
+
+        //#region  Club GET_ALL
+        //public async Task<ClubResponse> GetClubList()
+        //{
+        //    try
+        //    {
+        //        var clubs = new List<ClubResponse>();
+     
+        //        using (var command = _context.Database.GetDbConnection().CreateCommand())
+        //        {
+        //            command.CommandText = "GetClubList";
+        //            command.CommandType = System.Data.CommandType.StoredProcedure;
+
+        //            await _context.Database.OpenConnectionAsync();
+
+        //            using (var reader = await command.ExecuteReaderAsync())
+        //            {
+        //                while (await reader.ReadAsync())
+        //                {
+        //                    var clubInfo = new ClubResponse
+        //                    {
+        //                        ClubIDP = reader.GetInt64(reader.GetOrdinal("ClubIDP")),
+        //                        ClubName = reader.IsDBNull(reader.GetOrdinal("ClubName")) ? string.Empty : reader.GetString(reader.GetOrdinal("ClubName")),
+        //                        ClubBanner = reader.IsDBNull(reader.GetOrdinal("ClubBanner")) ? string.Empty : reader.GetString(reader.GetOrdinal("ClubBanner")),
+        //                        ClubVenue = reader.IsDBNull(reader.GetOrdinal("ClubVenue")) ? string.Empty : reader.GetString(reader.GetOrdinal("ClubVenue")),
+        //                        ClubDescription = reader.IsDBNull(reader.GetOrdinal("ClubDescription")) ? string.Empty : reader.GetString(reader.GetOrdinal("ClubDescription")),
+        //                        UserInfoList = new List<tblUser>()
+        //                    };
+
+
+
+        //                }
+        //            }
+        //            await _context.Database.CloseConnectionAsync();
+        //        }
+        //        return clubs;
+
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        await ErrorLog(1, e.Message, $"uspClub_GetAll_ByUser", 1);
+        //        return "Error, Something wrong!";
+        //    }
+        //}
+        //#endregion Club GET_ALL
 
         #region Trending Club GET_ALL
         public async Task<string> TrendingClub_GetAll()

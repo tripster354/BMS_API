@@ -2,6 +2,7 @@
 {
     public class TrendingTeachersDTO
     {
+        public long SkillID { get; set; }
         public long TeacherId { get; set; }
         public string ProfileImage { get; set; }
         public string FirstName { get; set; }

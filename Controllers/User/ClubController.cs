@@ -123,6 +123,36 @@ namespace BMS_API.Controllers.User
         }
         #endregion INSERT-UPDATE
 
+        #region GET-Club-List
+        [HttpPost]
+        [Route("GET-Club-List")]
+        public async Task<IActionResult> ClubList()
+        {
+            GetAuth();
+            if (objUser == null) return BadRequest(authFail);
+            _ClubService.ObjUser = objUser;
+
+            try
+            {
+                GetAuth();
+                if (objUser == null) return BadRequest(authFail);
+                _ClubService.ObjUser = objUser;
+
+
+
+                var strResponse = await _ClubService.TrendingClub_GetAll();
+                return Ok(strResponse);
+            }
+            catch (Exception e)
+            {
+                await ErrorLog(1, e.Message, $"Controller : TrendingClub_GetAll", 1);
+                return BadRequest(new { status = 0, data = 0, message = msgError });
+            }
+        }
+        #endregion GET-ALL
+
+
+
         #region GET-ALL
         [HttpPost]
         [Route("trending-club-get-all")]

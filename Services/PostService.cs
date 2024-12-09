@@ -285,7 +285,8 @@ namespace BMS_API.Services
                         {
                             var trendingSkill = new Posts
                             {
-
+                                CategoryID = (int)(reader["CategoryID"] != DBNull.Value ? Convert.ToInt32(reader["CategoryID"]) : (int?)0),
+                                CategoryName = reader["CategoryName"].ToString(),
                                 PostID = (int)(reader["PostID"] != DBNull.Value ? Convert.ToInt32(reader["PostID"]) : (int?)0),
                                 LikeStatus = (int)(reader["LikeStatus"] != DBNull.Value ? Convert.ToInt32(reader["LikeStatus"]) : (int?)0),
                                 PostImage = reader["PostImage"] != DBNull.Value ? baseBannerUrl + reader["PostImage"].ToString() : string.Empty,
