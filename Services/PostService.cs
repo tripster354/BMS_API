@@ -315,5 +315,56 @@ namespace BMS_API.Services
         }
 
         #endregion
+
+        #region Get All PostsAsync
+        public async Task<object> GetAllPostsAsync()
+        {
+            try
+            {
+                string baseBannerUrl = "https://bookmyskills.co.in/Uploads/";
+
+                List<PostsDetails> trendingSkills = new List<PostsDetails>();
+
+                using (var command = _context.Database.GetDbConnection().CreateCommand())
+                {
+                    command.CommandText = "[GetAllPosts]";
+                    command.CommandType = System.Data.CommandType.StoredProcedure;
+                    
+
+                    _context.Database.OpenConnection();
+
+                    using (var reader = await command.ExecuteReaderAsync())
+                    {
+
+                        while (await reader.ReadAsync())
+                        {
+                            var trendingSkill = new PostsDetails
+                            {
+                                PostID = (int)(reader["PostID"] != DBNull.Value ? Convert.ToInt32(reader["PostID"]) : (int?)0),
+                                LikeStatus = (int)(reader["LikeStatus"] != DBNull.Value ? Convert.ToInt32(reader["LikeStatus"]) : (int?)0),
+                                PostImage = reader["PostImage"] != DBNull.Value ? baseBannerUrl + reader["PostImage"].ToString() : string.Empty
+                            };
+
+                            trendingSkills.Add(trendingSkill);
+                        }
+                    }
+
+                    var response = new
+                    {
+                        status = 200,
+                        data = trendingSkills
+                    };
+
+                    return response;
+                }
+            }
+            catch (Exception e)
+            {
+                await ErrorLog(1, e.Message, $"Posts", 1);
+                return "Error, something went wrong!";
+            }
+        }
+
+        #endregion
     }
 }

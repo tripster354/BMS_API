@@ -27,5 +27,7 @@
         public int? TotalFavourites {  get; set; }
         public int? TrendRank { get; set; }
         public int? LikeStatus { get; set; }
+        public string? VendorProfileImage { get; set; }
+        public string? VendorName { get; set; }
     }
 }

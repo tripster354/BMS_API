@@ -28,6 +28,6 @@ namespace BMS_API.Services.Interface
         Task<string> FollowUnfollowUserAsync(long userId, long followedUserId, int actionType);
         Task<object> SkillsDetailsAsync(Int64 UserId);
         public Task<(IEnumerable<ParticipentInfoDTO> Participants, int TotalBookings, int TotalActivities, int TotalPartners)> GetParticipantInfoAsync();
-
+        Task<object> SkillsDetailsByIdAsync(Int64 ActivityId);
     }
 }

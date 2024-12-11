@@ -226,17 +226,10 @@ namespace BMS_API.Controllers.Partner
 
 
 
-                
-                    //return Ok(response);
 
+                //return Ok(response);
 
-
-
-
-
-
-
-                // File upload
+                //File upload
                 //var files = HttpContext.Request.Form.Files;
                 //if (files.Count > 0)
                 //{
@@ -324,6 +317,28 @@ namespace BMS_API.Controllers.Partner
         #endregion INSERT-UPDATE
 
 
+        #region GET Activity_Name
+        [HttpGet]
+        [Route("Activity_Name")]
+        public async Task<IActionResult> Activity_Name()
+        {
+            try
+            {
+                //GetAuth();
+                //if (objUser == null) return BadRequest(authFail);
+                //_ActivityService.ObjUser = objUser;
+
+                var strResponse = await _ActivityService.GetAllSkillInfoAsync();
+                return Ok(strResponse);
+            }
+            catch (Exception e)
+            {
+                await ErrorLog(1, e.Message, $"Controller : uspActivity_Get", 1);
+                return BadRequest(new { status = 0, data = 0, message = msgError });
+            }
+        }
+        #endregion GET
+
         #region GET
         [HttpPost]
         [Route("activity-get")]
@@ -331,8 +346,8 @@ namespace BMS_API.Controllers.Partner
         {
             try
             {
-                GetAuth();
-                if (objUser == null) return BadRequest(authFail);
+                //GetAuth();
+                //if (objUser == null) return BadRequest(authFail);
                 _ActivityService.ObjUser = objUser;
 
                 var strResponse = await _ActivityService.Activity_Get(modelCommonGet.Id);
@@ -367,6 +382,29 @@ namespace BMS_API.Controllers.Partner
             }
         }
         #endregion GET
+
+        //#region ActivityById
+        //[HttpPost]
+        //[Route("activity-get-By-Id")]
+        //public async Task<IActionResult> activitygetById(long ActivityId)
+        //{
+        //    try
+        //    {
+        //        GetAuth();
+        //        if (objUser == null) return BadRequest(authFail);
+        //        _ActivityService.ObjUser = objUser;
+
+        //        var strResponse = await _ActivityService.GetActivityById(ActivityId);
+        //        return Ok(strResponse);
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        await ErrorLog(1, e.Message, $"Controller : uspActivity_GetAll", 1);
+        //        return BadRequest(new { status = 201, data = new object[] { }, message = msgError });
+        //    }
+        //}
+
+        //#endregion
 
         #region GET-ALL
         [HttpPost]

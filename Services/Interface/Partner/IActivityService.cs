@@ -43,5 +43,7 @@ namespace BMS_API.Services.Interface.Partner
 
         Task<ActivityListDTO> GetActivityById(long userId);
 
+        Task<object> GetAllSkillInfoAsync();
+
     }
 }

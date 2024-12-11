@@ -27,5 +27,17 @@ namespace BMS_API.Models.Partner
         public TimeSpan? StartTimeActual {  get; set; }
         public TimeSpan? EndTimeActual { get; set; }
         public string ActivityInterestName {  get; set; }
+        public long VendorId { get; set; }
+    }
+
+
+
+    public partial class ActivityDetails
+    {
+        public Int64? ActivityIDP { get; set; }
+        public Int64? InterestIDF { get; set; }
+        public string? Banner { get; set; }
+        public string? ActivityTitle { get; set; }
+        public string? CategoryName { get; set; }
     }
 }

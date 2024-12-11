@@ -76,6 +76,8 @@ namespace BMS_API.Controllers
         }
         #endregion
 
+
+
         #region TrendingSkills
         [Route("dashboard-trending-skills")]
         [HttpPost]
@@ -128,6 +130,33 @@ namespace BMS_API.Controllers
         }
         #endregion
 
+
+
+        #region SkillsDetailsById
+        [Route("dashboard-skills-details-By-Id")]
+        [HttpPost]
+        public async Task<IActionResult> SkillsDetailsById(long ActivityId)
+        {
+            //GetAuth();
+            //if (objUser == null) return BadRequest(authFail);
+            //_DashboardService.ObjUser = objUser;
+
+            try
+            {
+                dynamic response = await _DashboardService.SkillsDetailsByIdAsync(ActivityId);
+                if (response.data == null || !((IEnumerable<object>)response.data).Any())
+                {
+                    return Ok(new { status = 201, data = "No data found" });
+                }
+                return Ok(response);
+            }
+            catch (Exception e)
+            {
+                await _DashboardService.ErrorLog(201, e.Message, $"Controller : Dashboard_Detail", 1);
+                return BadRequest(new { status = 0, data = 0, message = e.Message });
+            }
+        }
+        #endregion
 
 
         #region Skill-Likes/Dislikes

@@ -268,6 +268,32 @@ namespace BMS_API.Controllers
         #endregion
 
 
+        #region Get-All-Posts
+        [Route("GetAllPostsDetails")]
+        [HttpPost]
+        public async Task<IActionResult> GetAllPostsDetails()
+        {
+            GetAuth();
+            if (objUser == null) return BadRequest(authFail);
+            _PostsService.ObjUser = objUser;
+
+            try
+            {
+                dynamic response = await _PostsService.GetAllPostsAsync();
+                if (response.data == null || !((IEnumerable<object>)response.data).Any())
+                {
+                    return Ok(new { status = 201, data = "No data found" });
+                }
+                return Ok(response);
+            }
+            catch (Exception e)
+            {
+                await _PostsService.ErrorLog(201, e.Message, $"Controller : Posts_Detail", 1);
+                return BadRequest(new { status = 0, data = 0, message = e.Message });
+            }
+        }
+        #endregion
+
         #region Get-Posts
         [Route("Get-Posts")]
         [HttpPost]

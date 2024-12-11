@@ -7,6 +7,7 @@ namespace BMS_API.Models.DTOs
     {
         public int? LikeStatus { get; set; }
         public string SkillName { get; set; }
+        public string SkillImage { get; set; }
         public string? ProfileImage { get; set; }
         public string FullName { get; set; }
         public double? Rating { get; set; }

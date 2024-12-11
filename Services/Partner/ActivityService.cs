@@ -31,71 +31,7 @@ namespace BMS_API.Services.Partner
         public AuthorisedUser ObjUser { get; set; }
 
         #region Activity INSERT
-        //public async Task<Int64> Activity_Insert(Activity modelActivity)
-        //{
-        //    try
-        //    {
-        //        // Null checks
-        //        if (modelActivity == null)
-        //            throw new ArgumentNullException(nameof(modelActivity), "modelActivity is null.");
-
-        //        if (ObjUser == null || ObjUser.UserID == null)
-        //            throw new Exception("ObjUser or ObjUser.UserID is null.");
-
-        //        SqlParameter paramActivityIDP = new SqlParameter
-        //        {
-        //            ParameterName = "@ActivityIDP",
-        //            SqlDbType = System.Data.SqlDbType.BigInt,
-        //            Direction = System.Data.ParameterDirection.Output
-        //        };
-
-        //        SqlParameter paramPartnerIDF = new SqlParameter("@PartnerIDF", ObjUser.UserID);
-        //        SqlParameter paramInterestIDF = new SqlParameter("@InterestIDF", (object)modelActivity.InterestIDF ?? DBNull.Value);
-        //        SqlParameter paramBanner = new SqlParameter("@Banner", (object)modelActivity.BannerAttachment ?? DBNull.Value);
-        //        SqlParameter paramActivityTitle = new SqlParameter("@ActivityTitle", (object)modelActivity.ActivityTitle ?? DBNull.Value);
-        //        SqlParameter paramActivityAbout = new SqlParameter("@ActivityAbout", (object)modelActivity.ActivityAbout ?? DBNull.Value);
-        //        SqlParameter paramVenue = new SqlParameter("@Venue", (object)modelActivity.Venue ?? DBNull.Value);
-        //        SqlParameter paramLongitude = new SqlParameter("@Longitude", (object)modelActivity.Longitude ?? DBNull.Value);
-        //        SqlParameter paramLatitude = new SqlParameter("@Latitude", (object)modelActivity.Latitude ?? DBNull.Value);
-        //        SqlParameter paramGeoLocation = new SqlParameter("@GeoLocation", (object)modelActivity.GeoLocation ?? DBNull.Value);
-        //        SqlParameter paramStartDateTime = new SqlParameter("@StartDateTime", DateTime.ParseExact(modelActivity.StartDateTime, "dd/MM/yyyy HH:mm", CultureInfo.InvariantCulture));
-        //        SqlParameter paramEndDateTime = new SqlParameter("@EndDateTime", DateTime.ParseExact(modelActivity.EndDateTime, "dd/MM/yyyy HH:mm", CultureInfo.InvariantCulture));
-
-        //        SqlParameter paramStartTimeActual = new SqlParameter("@StartDateTimeActual", (object)(modelActivity.StartTimeActual.HasValue ? modelActivity.StartTimeActual.Value : DBNull.Value))
-        //        {
-        //            SqlDbType = System.Data.SqlDbType.Time
-        //        };
-
-        //        SqlParameter paramEndTimeActual = new SqlParameter("@EndTimeActual", (object)(modelActivity.EndTimeActual.HasValue ? modelActivity.EndTimeActual.Value : DBNull.Value))
-        //        {
-        //            SqlDbType = System.Data.SqlDbType.Time
-        //        };
-
-        //        SqlParameter paramTotalSeats = new SqlParameter("@TotalSeats", (object)modelActivity.TotalSeats ?? DBNull.Value);
-        //        SqlParameter paramAllocatedSeats = new SqlParameter("@AllocatedSeats", (object)modelActivity.AllocatedSeats ?? DBNull.Value);
-        //        SqlParameter paramPrice = new SqlParameter("@Price", (object)modelActivity.Price ?? DBNull.Value);
-        //        SqlParameter paramWebinarLink = new SqlParameter("@WebinarLink", (object)modelActivity.WebinarLink ?? DBNull.Value);
-        //        SqlParameter paramCouponIDF = new SqlParameter("@CouponIDF", (object)modelActivity.CouponIDF ?? DBNull.Value);
-        //        SqlParameter paramEntryBy = new SqlParameter("@EntryBy", ObjUser.UserID);
-
-        //        var paramSqlQuery = "EXECUTE dbo.uspActivity_InsertNew @ActivityIDP OUTPUT, @PartnerIDF, @InterestIDF, @Banner, @ActivityTitle, @ActivityAbout, @Venue, @Longitude, @Latitude, @GeoLocation, @StartDateTime, @EndDateTime, @StartDateTimeActual, @EndTimeActual, @TotalSeats, @AllocatedSeats, @Price, @WebinarLink, @CouponIDF, @EntryBy";
-
-        //        await _context.Database.ExecuteSqlRawAsync(paramSqlQuery, paramActivityIDP, paramPartnerIDF, paramInterestIDF, paramBanner, paramActivityTitle, paramActivityAbout, paramVenue, paramLongitude, paramLatitude, paramGeoLocation, paramStartDateTime, paramEndDateTime, paramStartTimeActual, paramEndTimeActual, paramTotalSeats, paramAllocatedSeats, paramPrice, paramWebinarLink, paramCouponIDF, paramEntryBy);
-
-        //        // Check if duplicate was found
-        //        if (Convert.ToInt64(paramActivityIDP.Value) == -1)
-        //        {
-        //            throw new Exception("Duplicate activity detected.");
-        //        }
-
-        //        return Convert.ToInt64(paramActivityIDP.Value);
-        //    }
-        //    catch (Exception e)
-        //    {
-        //        await ErrorLog(1, e.Message, $"uspActivity_InsertNew", 1);
-        //        return 0;
-        //    }
-        //}
+   
         public async Task<Int64> Activity_Insert(Activity modelActivity)
         {
             try
@@ -164,10 +100,12 @@ namespace BMS_API.Services.Partner
                 SqlParameter paramWebinarLink = new SqlParameter("@WebinarLink", (object)modelActivity.WebinarLink ?? DBNull.Value);
                 SqlParameter paramCouponIDF = new SqlParameter("@CouponIDF", (object)modelActivity.CouponIDF ?? DBNull.Value);
                 SqlParameter paramEntryBy = new SqlParameter("@EntryBy", ObjUser.UserID);
+                SqlParameter paramActivityInterestName = new SqlParameter("@ActivityInterestName", (object)modelActivity.ActivityInterestName ?? DBNull.Value);
+                SqlParameter paramVendorId = new SqlParameter("@VendorId", ObjUser.UserID);
 
-                var paramSqlQuery = "EXECUTE dbo.uspActivity_InsertNew @ActivityIDP OUTPUT, @PartnerIDF, @InterestIDF, @Banner, @ActivityTitle, @ActivityAbout, @Venue, @Longitude, @Latitude, @GeoLocation, @StartDateTime, @EndDateTime, @StartDateTimeActual, @EndTimeActual, @TotalSeats, @AllocatedSeats, @Price, @WebinarLink, @CouponIDF, @EntryBy";
+                var paramSqlQuery = "EXECUTE dbo.uspActivity_InsertNew @ActivityIDP OUTPUT, @PartnerIDF, @InterestIDF, @Banner, @ActivityTitle, @ActivityAbout, @Venue, @Longitude, @Latitude, @GeoLocation, @StartDateTime, @EndDateTime, @StartDateTimeActual, @EndTimeActual, @TotalSeats, @AllocatedSeats, @Price, @WebinarLink, @CouponIDF, @EntryBy,@ActivityInterestName, @VendorId";
 
-                await _context.Database.ExecuteSqlRawAsync(paramSqlQuery, paramActivityIDP, paramPartnerIDF, paramInterestIDF, paramBanner, paramActivityTitle, paramActivityAbout, paramVenue, paramLongitude, paramLatitude, paramGeoLocation, paramStartDateTime, paramEndDateTime, paramStartTimeActual, paramEndTimeActual, paramTotalSeats, paramAllocatedSeats, paramPrice, paramWebinarLink, paramCouponIDF, paramEntryBy);
+                await _context.Database.ExecuteSqlRawAsync(paramSqlQuery, paramActivityIDP, paramPartnerIDF, paramInterestIDF, paramBanner, paramActivityTitle, paramActivityAbout, paramVenue, paramLongitude, paramLatitude, paramGeoLocation, paramStartDateTime, paramEndDateTime, paramStartTimeActual, paramEndTimeActual, paramTotalSeats, paramAllocatedSeats, paramPrice, paramWebinarLink, paramCouponIDF, paramEntryBy,paramActivityInterestName,paramVendorId);
 
                 // Check if duplicate was found
                 if (Convert.ToInt64(paramActivityIDP.Value) == -1)
@@ -188,6 +126,59 @@ namespace BMS_API.Services.Partner
 
         #endregion Activity INSERT
 
+
+        #region Get All SkillinfoAsync
+        public async Task<object> GetAllSkillInfoAsync()
+        {
+            try
+            {
+                string baseBannerUrl = "https://bookmyskills.co.in/Uploads/";
+
+                List<ActivityDetails> trendingSkills = new List<ActivityDetails>();
+
+                using (var command = _context.Database.GetDbConnection().CreateCommand())
+                {
+                    command.CommandText = "[GetAllSkillName]";
+                    command.CommandType = System.Data.CommandType.StoredProcedure;
+
+
+                    _context.Database.OpenConnection();
+
+                    using (var reader = await command.ExecuteReaderAsync())
+                    {
+
+                        while (await reader.ReadAsync())
+                        {
+                            var trendingSkill = new ActivityDetails
+                            {
+                                ActivityIDP = (int)(reader["ActivityIDP"] != DBNull.Value ? Convert.ToInt32(reader["ActivityIDP"]) : (int?)0),
+                                InterestIDF = (int)(reader["InterestIDF"] != DBNull.Value ? Convert.ToInt32(reader["InterestIDF"]) : (int?)0),
+                                CategoryName = reader["CategoryName"].ToString(), 
+                                Banner = reader["Banner"] != DBNull.Value ? baseBannerUrl + reader["Banner"].ToString() : string.Empty,
+                                ActivityTitle = reader["ActivityTitle"].ToString() 
+                            };
+
+                            trendingSkills.Add(trendingSkill);
+                        }
+                    }
+
+                    var response = new
+                    {
+                        status = 200,
+                        data = trendingSkills
+                    };
+
+                    return response;
+                }
+            }
+            catch (Exception e)
+            {
+                await ErrorLog(1, e.Message, $"Posts", 1);
+                return "Error, something went wrong!";
+            }
+        }
+
+        #endregion
 
         #region Activity UPDATE
         public async Task<Int64> Activity_Update(Activity modelActivity)

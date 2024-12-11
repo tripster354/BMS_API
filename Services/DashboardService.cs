@@ -184,6 +184,79 @@ namespace BMS_API.Services
 
         #endregion Trending-Skills
 
+        #region Skills-Details
+        public async Task<object> SkillsDetailsByIdAsync(Int64 ActivityId)
+        {
+            try
+            {
+                string baseBannerUrl = "https://bookmyskills.co.in/Uploads/";
+
+                List<SkillDetails> trendingSkills = new List<SkillDetails>();
+
+                using (var command = _context.Database.GetDbConnection().CreateCommand())
+                {
+                    command.CommandText = "[SkillDetailById]";
+                    command.CommandType = System.Data.CommandType.StoredProcedure;
+                    command.Parameters.Add(new SqlParameter()
+                    {
+                        ParameterName = "@ActivityIDP",
+                        SqlDbType = SqlDbType.BigInt,
+                        Value = ActivityId
+                    });
+
+                    _context.Database.OpenConnection();
+
+                    using (var reader = await command.ExecuteReaderAsync())
+                    {
+
+                        while (await reader.ReadAsync())
+                        {
+                            var trendingSkill = new SkillDetails
+                            {
+                                CategoryID = (int)(reader["CategoryID"] != DBNull.Value ? Convert.ToInt32(reader["CategoryID"]) : (int?)0),
+                                CategoryName = reader["CategoryName"].ToString(),
+                                LikeStatus = (int)(reader["LikeStatus"] != DBNull.Value ? Convert.ToInt32(reader["LikeStatus"]) : (int?)0),
+                                //ProfileImage = reader["ProfileImage"] != DBNull.Value ? baseBannerUrl + reader["ProfileImage"].ToString() : string.Empty,
+                                ProfileImage = reader["ProfileImage"].ToString(),
+                                SkillName = reader["SkillName"].ToString(),
+                                SkillImage = reader["SkillImage"] != DBNull.Value ? baseBannerUrl + reader["SkillImage"].ToString() : string.Empty,
+                                FullName = reader["FullName"].ToString(),
+                                Description = reader["Description"].ToString(),
+                                Location = reader["Location"].ToString(),
+                                Duration = reader["Duration"].ToString(),
+                                RemainingSeats = reader["RemainingSeats"] != DBNull.Value ? Convert.ToInt32(reader["RemainingSeats"]) : (int?)null,
+                                //GalleryImage = ColumnExists(reader, "GalleryImage") ? reader["GalleryImage"]?.ToString() : null,
+
+                                Rating = (int?)(ColumnExists(reader, "Rating") ? (reader["Rating"] != DBNull.Value ? Convert.ToDouble(reader["Rating"]) : (double?)null) : null),
+                                Price = ColumnExists(reader, "Price") ? (reader["Price"] != DBNull.Value ? Convert.ToInt32(reader["Price"]) : (int?)null) : null,
+                            };
+
+                            trendingSkills.Add(trendingSkill);
+                        }
+                    }
+
+                    var response = new
+                    {
+                        status = 200,
+                        data = trendingSkills
+                    };
+
+                    return response;
+                }
+            }
+            catch (Exception e)
+            {
+                await ErrorLog(1, e.Message, $"SkillDetail", 1);
+                return "Error, something went wrong!";
+            }
+        }
+
+
+
+        #endregion Trending-Skills
+
+
+
         #region Trending-Skills
         public async Task<object> GetAllTrendingSkillsAsync(Int64 activityStatus)
         {
@@ -216,6 +289,8 @@ namespace BMS_API.Services
                                 SkillId = (int)(reader["ActivityIDP"] != DBNull.Value ? Convert.ToInt32(reader["ActivityIDP"]) : (int?)null),
                                 SkillImage = reader["SkillImage"] != DBNull.Value ? baseBannerUrl + reader["SkillImage"].ToString() : string.Empty,
                                 SkillName = reader["SkillName"].ToString(),
+                                VendorProfileImage = reader["vendorProfileImage"].ToString(),
+                                VendorName = reader["vendorName"].ToString(),
                                 StartDateTime = reader["StartDateTime"].ToString(),
                                 Description = reader["Description"].ToString(),
                                 AllocatedSeats = reader["AllocatedSeats"] != DBNull.Value ? Convert.ToInt32(reader["AllocatedSeats"]) : (int?)null,
@@ -237,8 +312,8 @@ namespace BMS_API.Services
                                 TotalClicks = ColumnExists(reader, "TotalClicks") ? (reader["TotalClicks"] != DBNull.Value ? Convert.ToInt32(reader["TotalClicks"]) : (int?)null) : null,
                                 TotalFavourites = ColumnExists(reader, "TotalFavourites") ? (reader["TotalFavourites"] != DBNull.Value ? Convert.ToInt32(reader["TotalFavourites"]) : (int?)null) : null,
                                 TrendRank = (int?)(ColumnExists(reader, "TrendRank") ? (reader["TrendRank"] != DBNull.Value ? Convert.ToDouble(reader["TrendRank"]) : (double?)null) : null),
-                                LikeStatus = (int?)(ColumnExists(reader, "LikeStatus") ? (reader["LikeStatus"] != DBNull.Value ? Convert.ToInt32(reader["LikeStatus"]) : (int?)null) : null)
-                                
+                                LikeStatus = (int?)(ColumnExists(reader, "LikeStatus") ? (reader["LikeStatus"] != DBNull.Value ? Convert.ToInt32(reader["LikeStatus"]) : (int?)null) : null),
+                            
                             };
 
                             trendingSkills.Add(trendingSkill);
@@ -591,24 +666,27 @@ namespace BMS_API.Services
             try
             {
                 List<ClubDTO> trendingClubs = new List<ClubDTO>();
-                using(var command = _context.Database.GetDbConnection().CreateCommand())
+                using (var command = _context.Database.GetDbConnection().CreateCommand())
                 {
                     command.CommandText = "uspGetTrendingClubs";
                     command.CommandType = System.Data.CommandType.StoredProcedure;
                     _context.Database.OpenConnection();
 
-                    using(var reader = await command.ExecuteReaderAsync())
+                    using (var reader = await command.ExecuteReaderAsync())
                     {
-                        while(await reader.ReadAsync())
+                        while (await reader.ReadAsync())
                         {
+                            string baseUrl = "https://bookmyskills.co.in/Uploads/";
+                            var Clubfile = reader["ClubImage"]?.ToString();
+
                             var club = new ClubDTO
                             {
                                 ClubID = reader["ClubIDP"] != DBNull.Value ? Convert.ToInt64(reader["ClubIDP"]) : 0,
                                 ClubName = reader["ClubName"] != DBNull.Value ? reader["ClubName"].ToString() : string.Empty,
-                                TotalSubscriptions = reader["TotalSubscriptions"] != DBNull.Value ? Convert.ToInt32(reader["TotalSubscriptions"]) : 0,
-                                TotalSkills = reader["TotalSkills"] != DBNull.Value ? Convert.ToInt32(reader["TotalSkills"]) : 0,
-                                TrendingScore = reader["TrendingScore"] != DBNull.Value ? Convert.ToInt32(reader["TrendingScore"]) : 0,
-                                ClubImage = reader["ClubBanner"] != DBNull.Value ? reader["ClubBanner"].ToString() : string.Empty
+                                ClubImage = !string.IsNullOrEmpty(Clubfile) ? baseUrl + Clubfile : null
+                                /*                                TotalSubscriptions = reader["TotalSubscriptions"] != DBNull.Value ? Convert.ToInt32(reader["TotalSubscriptions"]) : 0,
+                                                                TotalSkills = reader["TotalSkills"] != DBNull.Value ? Convert.ToInt32(reader["TotalSkills"]) : 0,
+                                                                TrendingScore = reader["TrendingScore"] != DBNull.Value ? Convert.ToInt32(reader["TrendingScore"]) : 0,*/
                             };
                             trendingClubs.Add(club);
                         }
@@ -616,12 +694,13 @@ namespace BMS_API.Services
                     return trendingClubs;
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 await ErrorLog(1, ex.Message, "uspGetTrendingClubs", 1);
                 return null;
             }
         }
+
         #endregion
 
         #region Dashboard - GetStudentsList

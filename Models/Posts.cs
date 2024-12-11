@@ -10,4 +10,12 @@
         public long CategoryID { get; set; }
         public string CategoryName { get; set; }
     }
+
+
+    public class PostsDetails
+    {
+        public long PostID { get; set; }
+        public int? LikeStatus { get; set; }
+        public string PostImage { get; set; }
+    }
 }
