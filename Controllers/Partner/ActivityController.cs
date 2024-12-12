@@ -176,30 +176,36 @@ namespace BMS_API.Controllers.Partner
                 //[HttpPost]
                 //public async Task<ActionResult> UploadBrowseFiles(IList<IFormFile> files)
                 //{
-                    
-                        string fileName = null;
+                var response = new { FileName = "" };
 
-                        foreach (IFormFile source in modelActivity.BannerAttachment)
-                        {
-                            // Get original file name to get the extension from it.
-                            string orgFileName = ContentDispositionHeaderValue.Parse(source.ContentDisposition).FileName;
-
-                            // Create a new file name to avoid existing files on the server with the same names.
-                            // fileName = DateTime.Now.ToFileTime() + Path.GetExtension(orgFileName);
-                            fileName = DateTime.Now.Second + orgFileName;
+                if (modelActivity.BannerAttachment != null)
+                {
+                    string fileName = null;
 
 
-                            string fullPath = GetFullPathOfFile(fileName.Replace("\"", ""));
+                    foreach (IFormFile source in modelActivity.BannerAttachment)
+                    {
+                        // Get original file name to get the extension from it.
+                        string orgFileName = ContentDispositionHeaderValue.Parse(source.ContentDisposition).FileName;
 
-                            // Create the directory.
-                            Directory.CreateDirectory(Directory.GetParent(fullPath).FullName);
+                        // Create a new file name to avoid existing files on the server with the same names.
+                        // fileName = DateTime.Now.ToFileTime() + Path.GetExtension(orgFileName);
+                        fileName = DateTime.Now.Second + orgFileName;
 
-                            // Save the file to the server.
-                            await using FileStream output = System.IO.File.Create(fullPath);
-                            await source.CopyToAsync(output);
-                        }
 
-                        var response = new { FileName = fileName.Replace("\"", "") };
+                        string fullPath = GetFullPathOfFile(fileName.Replace("\"", ""));
+
+                        // Create the directory.
+                        Directory.CreateDirectory(Directory.GetParent(fullPath).FullName);
+
+                        // Save the file to the server.
+                        await using FileStream output = System.IO.File.Create(fullPath);
+                        await source.CopyToAsync(output);
+                    }
+
+                     response = new { FileName = fileName.Replace("\"", "") };
+                }
+                
                 //ViewBag.FileName = response.FileName;
 
                 Activity activityRequestModel = new Activity();
@@ -224,37 +230,6 @@ namespace BMS_API.Controllers.Partner
                     activityRequestModel.EndTimeActual = modelActivity.EndTimeActual;
                     activityRequestModel.ActivityInterestName = modelActivity.ActivityInterestName;
 
-
-
-
-                //return Ok(response);
-
-                //File upload
-                //var files = HttpContext.Request.Form.Files;
-                //if (files.Count > 0)
-                //{
-                //    var file1 = files[0];
-                //    directoryPath = Path.Combine(webHostEnvironment.ContentRootPath, "Assets", "Partner");
-                //    if (!Directory.Exists(directoryPath))
-                //    {
-                //        Directory.CreateDirectory(directoryPath);
-                //    }
-                //    tempDirectoryPath = Path.Combine(directoryPath, "Temp");
-                //    if (!Directory.Exists(tempDirectoryPath))
-                //    {
-                //        Directory.CreateDirectory(tempDirectoryPath);
-                //    }
-                //    if (file1.Length > 0)
-                //    {
-                //        var fileType = Path.GetExtension(file1.FileName);
-                //        var fileName = Guid.NewGuid().ToString().Replace("-", "") + Path.GetExtension(file1.FileName);
-                //        using (var fileStream = new FileStream(Path.Combine(tempDirectoryPath, fileName), FileMode.Create))
-                //        {
-                //            await file1.CopyToAsync(fileStream);
-                //        }
-                //        modelActivity.BannerAttachment = fileName;
-                //    }
-                //}
 
                 if (modelActivity.ActivityIDP > 0)
                 {
@@ -316,6 +291,8 @@ namespace BMS_API.Controllers.Partner
         }
         #endregion INSERT-UPDATE
 
+
+       
 
         #region GET Activity_Name
         [HttpGet]

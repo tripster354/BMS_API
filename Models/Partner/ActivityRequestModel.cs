@@ -8,7 +8,7 @@ namespace BMS_API.Models.Partner
     {
         public Int64? ActivityIDP { get; set; }
         public Int64? InterestIDF { get; set; }
-        public IList<IFormFile> BannerAttachment { get; set; }
+        public IList<IFormFile>? BannerAttachment { get; set; }
         public string? ActivityTitle { get; set; }
         public string? ActivityAbout { get; set; }
         public string? Venue { get; set; }
@@ -26,6 +26,6 @@ namespace BMS_API.Models.Partner
         public string? BookSkillButton { get; set; }
         public TimeSpan? StartTimeActual { get; set; }
         public TimeSpan? EndTimeActual { get; set; }
-        public string ActivityInterestName { get; set; }
+        public string? ActivityInterestName { get; set; }
     }
 }

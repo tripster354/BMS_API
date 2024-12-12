@@ -14,4 +14,13 @@
         public int TrendingScore { get; set; }  // Z = M + N + L
         public string ProfileImagePath {  get; set; }
     }
+
+
+
+    public class TrendingTeachersInfo
+    {
+        public string ProfileImage { get; set; }
+        public string FullName { get; set; }
+        public long UserID { get; set; }
+    }
 }

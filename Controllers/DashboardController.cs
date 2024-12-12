@@ -104,6 +104,9 @@ namespace BMS_API.Controllers
         }
         #endregion
 
+
+
+
         #region TrendingSkills
         [Route("dashboard-skills-details")]
         [HttpPost]
@@ -312,7 +315,8 @@ namespace BMS_API.Controllers
 
             try
             {
-                var trendingTeachers = await _DashboardService.GetTrendingTeachersAsync();
+                //var trendingTeachers = await _DashboardService.GetTrendingTeachersAsync();
+                var trendingTeachers = await _DashboardService.GetTrendingTeachersInfoAsync();
                 if (trendingTeachers == null || !trendingTeachers.Any())
                 {
                     return NotFound("No trending teachers available");

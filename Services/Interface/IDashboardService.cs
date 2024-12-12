@@ -29,5 +29,6 @@ namespace BMS_API.Services.Interface
         Task<object> SkillsDetailsAsync(Int64 UserId);
         public Task<(IEnumerable<ParticipentInfoDTO> Participants, int TotalBookings, int TotalActivities, int TotalPartners)> GetParticipantInfoAsync();
         Task<object> SkillsDetailsByIdAsync(Int64 ActivityId);
+        Task<List<TrendingTeachersInfo>> GetTrendingTeachersInfoAsync();
     }
 }

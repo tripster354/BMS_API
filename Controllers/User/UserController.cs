@@ -41,29 +41,35 @@ namespace BMS_API.Controllers.User
         {
             try
             {
-                string fileName = null;
+                var response = new { FileName = "" };
 
-                foreach (IFormFile source in user.ProfileImage)
+                if(user.ProfileImage != null) 
                 {
-                    // Get original file name to get the extension from it.
-                    string orgFileName = ContentDispositionHeaderValue.Parse(source.ContentDisposition).FileName;
+                    string fileName = null;
 
-                    // Create a new file name to avoid existing files on the server with the same names.
-                    // fileName = DateTime.Now.ToFileTime() + Path.GetExtension(orgFileName);
-                    fileName = DateTime.Now.Second + orgFileName;
+                    foreach (IFormFile source in user.ProfileImage)
+                    {
+                        // Get original file name to get the extension from it.
+                        string orgFileName = ContentDispositionHeaderValue.Parse(source.ContentDisposition).FileName;
+
+                        // Create a new file name to avoid existing files on the server with the same names.
+                        // fileName = DateTime.Now.ToFileTime() + Path.GetExtension(orgFileName);
+                        fileName = DateTime.Now.Second + orgFileName;
 
 
-                    string fullPath = GetFullPathOfFile(fileName.Replace("\"", ""));
+                        string fullPath = GetFullPathOfFile(fileName.Replace("\"", ""));
 
-                    // Create the directory.
-                    Directory.CreateDirectory(Directory.GetParent(fullPath).FullName);
+                        // Create the directory.
+                        Directory.CreateDirectory(Directory.GetParent(fullPath).FullName);
 
-                    // Save the file to the server.
-                    await using FileStream output = System.IO.File.Create(fullPath);
-                    await source.CopyToAsync(output);
+                        // Save the file to the server.
+                        await using FileStream output = System.IO.File.Create(fullPath);
+                        await source.CopyToAsync(output);
+                    }
+
+                     response = new { FileName = fileName.Replace("\"", "") };
                 }
 
-                var response = new { FileName = fileName.Replace("\"", "") };
 
 
 

@@ -51,7 +51,7 @@ namespace BMS_API.Models.User
         public string? MobileNo { get; set; }
         public string EmailID { get; set; }
         public string? Password { get; set; }
-        public IList<IFormFile> ProfileImage { get; set; }
+        public IList<IFormFile>? ProfileImage { get; set; }
         public string? Address { get; set; }
         public DateTime? RegistrationDate { get; set; }
         public string? SocialGoogle { get; set; }

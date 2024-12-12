@@ -612,6 +612,50 @@ namespace BMS_API.Services
         }
         #endregion
 
+
+        #region Dashboard - trending-teachers
+        public async Task<List<TrendingTeachersInfo>> GetTrendingTeachersInfoAsync()
+        {
+            try
+            {
+                List<TrendingTeachersInfo> trendingTeachers = new List<TrendingTeachersInfo>();
+
+                string baseBannerUrl = "https://bookmyskills.co.in/Uploads/";
+
+                using (var command = _context.Database.GetDbConnection().CreateCommand())
+                {
+                    command.CommandText = "GetTrendingTeachers";
+                    command.CommandType = System.Data.CommandType.StoredProcedure;
+                    _context.Database.OpenConnection();
+
+
+                    using (var reader = await command.ExecuteReaderAsync())
+                    {
+                        while (await reader.ReadAsync())
+                        {
+                            var teacher = new TrendingTeachersInfo
+                            {
+                                UserID = reader["UserID"] != DBNull.Value ? Convert.ToInt64(reader["UserID"]) : 0,
+                                ProfileImage = reader["ProfileImage"] != DBNull.Value ? reader["ProfileImage"].ToString() : string.Empty,
+                                FullName = reader["FullName"] != DBNull.Value ? reader["FullName"].ToString() : string.Empty,
+                               
+                            };
+
+                            trendingTeachers.Add(teacher);
+                        }
+                    }
+                }
+                return trendingTeachers;
+            }
+            catch (Exception ex)
+            {
+                await ErrorLog(1, ex.Message, "uspGetTrendingTeachers", 1);
+                return null;
+            }
+        }
+        #endregion
+
+
         #region Dashboard - trending-teachers
         public async Task<List<TrendingTeachersDTO>> GetTrendingTeachersAsync()
         {

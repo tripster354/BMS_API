@@ -26,8 +26,8 @@ namespace BMS_API.Models.Partner
         public string? BookSkillButton {  get; set; } 
         public TimeSpan? StartTimeActual {  get; set; }
         public TimeSpan? EndTimeActual { get; set; }
-        public string ActivityInterestName {  get; set; }
-        public long VendorId { get; set; }
+        public string? ActivityInterestName {  get; set; }
+        public long? VendorId { get; set; }
     }
 
 
