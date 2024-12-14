@@ -500,7 +500,7 @@ namespace BMS_API.Controllers.User
             try
             {
                 GetAuth();
-                if (objUser == null) return BadRequest(authFail);
+                if (objUser == null) return Unauthorized(authFail);
                 _tblUserService.ObjUser = objUser;
 
                 var strResponse = await _tblUserService.User_Feed_Get_All(param);

@@ -47,7 +47,6 @@ namespace BudgetManagement.Controllers
         public async Task GetAuth()
         {
             if (Request.Headers.ContainsKey("UserType"))
-
             {
                 if ((Request.Headers["UserType"].FirstOrDefault()) == "4")
                 {

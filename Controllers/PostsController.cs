@@ -42,7 +42,7 @@ namespace BMS_API.Controllers
             try
             {
                 GetAuth();
-                if (objUser == null) return BadRequest(authFail);
+                if (objUser == null) return Unauthorized(authFail);
                 _PostsService.ObjUser = objUser;
 
                 var missingFields = new List<string>();
@@ -99,6 +99,7 @@ namespace BMS_API.Controllers
                 postRequestModel.PostDescription = modelActivity.PostDescription;
                 postRequestModel.CreatedDate = DateTime.Now;
                 postRequestModel.PostImage = response.FileName;
+                postRequestModel.PostTitle = modelActivity.PostTitle;
                
 
                 if (modelActivity.PostID > 0)
@@ -161,7 +162,7 @@ namespace BMS_API.Controllers
         public async Task<IActionResult> LikeDislikePosts(long PostID ,int LikeStatus)
         {
             GetAuth();
-            if (objUser == null) return BadRequest(authFail);
+            if (objUser == null) return Unauthorized(authFail);
             _PostsService.ObjUser = objUser;
 
             try
@@ -177,7 +178,7 @@ namespace BMS_API.Controllers
                 }
                 else if (PostID > 0 && LikeStatus == 0)
                 {
-                    dynamic response = await _PostsService.DisLikePostStatus(PostID, LikeStatus);
+                    dynamic response = await _PostsService.SetPostLikeStatus(PostID, LikeStatus);
                     if (response == false)
                     {
                         return BadRequest(new { status = 201, data = "Can Not Proceed" });
@@ -206,7 +207,7 @@ namespace BMS_API.Controllers
         public async Task<IActionResult> AddCommentsBypost(long PostID, string CommentText)
         {
             GetAuth();
-            if (objUser == null) return BadRequest(authFail);
+            if (objUser == null) return Unauthorized(authFail);
             _PostsService.ObjUser = objUser;
 
             try
@@ -240,7 +241,7 @@ namespace BMS_API.Controllers
         public async Task<IActionResult> CommentsBypost(long PostID)
         {
             GetAuth();
-            if (objUser == null) return BadRequest(authFail);
+            if (objUser == null) return Unauthorized(authFail);
             _PostsService.ObjUser = objUser;
 
             try
@@ -271,15 +272,15 @@ namespace BMS_API.Controllers
         #region Get-All-Posts
         [Route("GetAllPostsDetails")]
         [HttpPost]
-        public async Task<IActionResult> GetAllPostsDetails()
+        public async Task<IActionResult> GetAllPostsDetails(int page, int per_page)
         {
             GetAuth();
-            if (objUser == null) return BadRequest(authFail);
+            if (objUser == null) return Unauthorized(authFail);
             _PostsService.ObjUser = objUser;
 
             try
             {
-                dynamic response = await _PostsService.GetAllPostsAsync();
+                dynamic response = await _PostsService.GetAllPostsAsync(page,per_page);
                 if (response.data == null || !((IEnumerable<object>)response.data).Any())
                 {
                     return Ok(new { status = 201, data = "No data found" });
@@ -300,7 +301,7 @@ namespace BMS_API.Controllers
         public async Task<IActionResult> GetPosts()
         {
             GetAuth();
-            if (objUser == null) return BadRequest(authFail);
+            if (objUser == null) return Unauthorized(authFail);
             _PostsService.ObjUser = objUser;
 
             try

@@ -137,7 +137,8 @@ namespace BMS_API.Controllers.Partner
             try
             {
                 GetAuth();
-                if (objUser == null) return BadRequest(authFail);
+                if (objUser == null) 
+                return Unauthorized(authFail);
                 _ActivityService.ObjUser = objUser;
 
                 // Check for required fields
@@ -248,7 +249,7 @@ namespace BMS_API.Controllers.Partner
                         paramIdentityAction = msgInserted; // Activity was successfully inserted
                     }
                 }
-                if (modelActivity.BannerAttachment.Count > 0 && paramIdentity > 0)
+                if (modelActivity.BannerAttachment != null && paramIdentity > 0)
                 {
                     // File move to particular folder
                     string newDirectoryPath = Path.Combine(directoryPath, objUser.UserID.ToString(), "Activity");
@@ -324,7 +325,7 @@ namespace BMS_API.Controllers.Partner
             try
             {
                 //GetAuth();
-                //if (objUser == null) return BadRequest(authFail);
+                //if (objUser == null) return Unauthorized(authFail);
                 _ActivityService.ObjUser = objUser;
 
                 var strResponse = await _ActivityService.Activity_Get(modelCommonGet.Id);
@@ -368,7 +369,7 @@ namespace BMS_API.Controllers.Partner
         //    try
         //    {
         //        GetAuth();
-        //        if (objUser == null) return BadRequest(authFail);
+        //        if (objUser == null) return Unauthorized(authFail);
         //        _ActivityService.ObjUser = objUser;
 
         //        var strResponse = await _ActivityService.GetActivityById(ActivityId);
@@ -391,7 +392,7 @@ namespace BMS_API.Controllers.Partner
             try
             {
                 GetAuth();
-                if (objUser == null) return BadRequest(authFail);
+                if (objUser == null) return Unauthorized(authFail);
                 _ActivityService.ObjUser = objUser;
 
                 var strResponse = await _ActivityService.Activity_GetAll(status, per_page, page);
@@ -408,7 +409,7 @@ namespace BMS_API.Controllers.Partner
         //    try
         //    {
         //        GetAuth();
-        //        if (objUser == null) return BadRequest(authFail);
+        //        if (objUser == null) return Unauthorized(authFail);
         //        _ActivityService.ObjUser = objUser;
 
         //        var strResponse = await _ActivityService.Activity_GetAll(modelCommonGet.Id);
@@ -431,7 +432,7 @@ namespace BMS_API.Controllers.Partner
             try
             {
                 GetAuth();
-                if (objUser == null) return BadRequest(authFail);
+                if (objUser == null) return Unauthorized(authFail);
                 _ActivityService.ObjUser = objUser;
 
                 var strResponse = await _ActivityService.Activity_GetAll_ByUser(param);
@@ -501,7 +502,7 @@ namespace BMS_API.Controllers.Partner
             try
             {
                 GetAuth();
-                if (objUser == null) return BadRequest(authFail);
+                if (objUser == null) return Unauthorized(authFail);
                 _ActivityService.ObjUser = objUser;
 
                 var strResponse = await _ActivityService.Suggested_Offer_Activity_GetAll_ByUserIDF(modelsearch);
@@ -524,7 +525,7 @@ namespace BMS_API.Controllers.Partner
             try
             {
                 GetAuth();
-                if (objUser == null) return BadRequest(authFail);
+                if (objUser == null) return Unauthorized(authFail);
                 _ActivityService.ObjUser = objUser;
 
                 var strResponse = await _ActivityService.Activity_Booked(modelactivitybook);
@@ -546,7 +547,7 @@ namespace BMS_API.Controllers.Partner
             try
             {
                 GetAuth();
-                if (objUser == null) return BadRequest(authFail);
+                if (objUser == null) return Unauthorized(authFail);
                 _ActivityService.ObjUser = objUser;
 
                 var strResponse = await _ActivityService.Activity_GetAll_BySearch(activitySearch);
@@ -569,7 +570,7 @@ namespace BMS_API.Controllers.Partner
             try
             {
                 GetAuth();
-                if (objUser == null) return BadRequest(authFail);
+                if (objUser == null) return Unauthorized(authFail);
                 _ActivityService.ObjUser = objUser;
 
                 var strResponse = await _ActivityService.Activity_Booked_Cancelled(modelactivitybookcancelled);
@@ -591,7 +592,7 @@ namespace BMS_API.Controllers.Partner
             try
             {
                 GetAuth();
-                if (objUser == null) return BadRequest(authFail);
+                if (objUser == null) return Unauthorized(authFail);
                 _ActivityService.ObjUser = objUser;
 
                 var strResponse = await _ActivityService.Activity_Coupon_GetAll_Vendor(activityenddate);
@@ -636,7 +637,7 @@ namespace BMS_API.Controllers.Partner
             try
             {
                 GetAuth();
-                if (objUser == null) return BadRequest(authFail);
+                if (objUser == null) return Unauthorized(authFail);
                 _ActivityService.ObjUser = objUser;
 
                 Int32 responseIdentity = (int)await _ActivityService.Activity_Delete(modelCommonGet.Id);
@@ -661,7 +662,7 @@ namespace BMS_API.Controllers.Partner
             try
             {
                 GetAuth();
-                if (objUser == null) return BadRequest(authFail);
+                if (objUser == null) return Unauthorized(authFail);
                 _ActivityService.ObjUser = objUser;
 
                 var strResponse = await _ActivityService.Activity_Update_Favourite_ByUser(modelCommonGet.Id);
@@ -683,7 +684,7 @@ namespace BMS_API.Controllers.Partner
             try
             {
                 GetAuth();
-                if (objUser == null) return BadRequest(authFail);
+                if (objUser == null) return Unauthorized(authFail);
                 _ActivityService.ObjUser = objUser;
 
                 var strResponse = await _ActivityService.Activity_GetAll_Favourite(modelsearch);
@@ -706,7 +707,7 @@ namespace BMS_API.Controllers.Partner
             try
             {
                 GetAuth();
-                if (objUser == null) return BadRequest(authFail);
+                if (objUser == null) return Unauthorized(authFail);
                 _ActivityService.ObjUser = objUser;
 
                 var strResponse = await _ActivityService.Activity_Update_Follower(modelFollowerUpdate);
@@ -728,7 +729,7 @@ namespace BMS_API.Controllers.Partner
             try
             {
                 GetAuth();
-                if (objUser == null) return BadRequest(authFail);
+                if (objUser == null) return Unauthorized(authFail);
                 _ActivityService.ObjUser = objUser;
 
                 var strResponse = await _ActivityService.Activity_GetAll_Follower();

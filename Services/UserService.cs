@@ -130,6 +130,13 @@ namespace BMS_API.Services
 
                 user.UserIDP = Convert.ToInt64(parameterUserIDP.Value); // Set the new UserIDP for the user
                 user.LoginToken = loginToken;  // Set the generated LoginToken for the user
+
+                string baseBannerUrl = "https://bookmyskills.co.in/Uploads/";
+
+                if(user.ProfileImage != ""&&user.ProfileImage != null)
+                {
+                user.ProfileImage = baseBannerUrl + user.ProfileImage;
+                }
                 return user;
             }
             catch (Exception ex)

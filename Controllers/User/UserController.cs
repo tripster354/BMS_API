@@ -112,7 +112,7 @@ namespace BMS_API.Controllers.User
                     // Duplicate entry case
                     return Ok(new { status = 201, data = new object[] { }, message = "Mobile or Email are already registered" });
                 }
-                return Ok(new { statis = 200, UserDetails = newUser, message = "user created successfully." });
+                return Ok(new { status = 200, UserDetails = newUser, message = "user created successfully." });
                 // Successful creation case
                 //return Ok(new
                 //{

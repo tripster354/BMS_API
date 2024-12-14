@@ -13,6 +13,6 @@ namespace BMS_API.Services.Interface
         Task<bool> SetPostLikeStatus(long PostID, int LikeStatus);
         Task<bool> DisLikePostStatus(long PostID, int LikeStatus);
         Task<bool> InsCommentsBypost(long PostID, string CommentText);
-        Task<object> GetAllPostsAsync();
+        Task<object> GetAllPostsAsync(int page, int per_page);
     }
 }

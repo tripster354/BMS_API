@@ -12,6 +12,7 @@ namespace BMS_API.Models
         //public long UserIDF { get; set; }
         public string PostDescription { get; set; }
         public IList<IFormFile> PostImage { get; set; }
+        public string PostTitle { get; set; }
     }
 
 
@@ -24,6 +25,7 @@ namespace BMS_API.Models
         public int LikeStatus { get; set; }
         public DateTime? CreatedDate { get; set; }
         public string PostImage { get; set; }
-        public string Comments { get; set; }
+        //public string Comments { get; set; }
+        public string PostTitle { get; set; }
     }
 }

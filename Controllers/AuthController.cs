@@ -77,7 +77,7 @@ namespace BudgetManagement.Controllers
             try
             {
                 GetAuth();
-                if (objUser == null) return BadRequest(authFail);
+                if (objUser == null) return Unauthorized(authFail);
 
                 Int64 strResponse = await _authService.Auth_Admin_Change_Password(adminInfo.UserName, adminInfo.Password, adminInfo.FirstName, adminInfo.LastName, adminInfo.OldPassword);
                 return Ok(strResponse);
@@ -95,7 +95,7 @@ namespace BudgetManagement.Controllers
             try
             {
                 GetAuth();
-                if (objUser == null) return BadRequest(authFail);
+                if (objUser == null) return Unauthorized(authFail);
 
                 bool strResponse = await _authService.Auth_Admin_Change_Settings(adminInfo);
                 return Ok(strResponse);
@@ -113,7 +113,7 @@ namespace BudgetManagement.Controllers
             try
             {
                 GetAuth();
-                if (objUser == null) return BadRequest(authFail);
+                if (objUser == null) return Unauthorized(authFail);
 
                 string strResponse = await _settingsService.Admin_GetSettings();
                 return Ok(strResponse);

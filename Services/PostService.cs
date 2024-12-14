@@ -58,7 +58,8 @@ namespace BMS_API.Services
                             UserIDF = reader["UserIDF"] != DBNull.Value ? (long)reader["UserIDF"] : 0, // Set the ActivityId
                             PostImage = !string.IsNullOrEmpty(PostImage) ? baseBannerUrl + PostImage : null,
                             PostDescription = reader["PostDescription"]?.ToString(),
-                            Comments = reader["Comments"]?.ToString(),
+                            PostTitle = reader["PostTitle"]?.ToString(),
+                            //Comments = reader["Comments"]?.ToString(),
                             LikeStatus = reader["LikeStatus"] != DBNull.Value ? (int)reader["Likes"] : 0,
                             CreatedDate = reader["CreatedDate"] != DBNull.Value ? (DateTime?)reader["CreatedDate"] : null,
  
@@ -120,9 +121,11 @@ namespace BMS_API.Services
                 using (var command = _context.Database.GetDbConnection().CreateCommand())
                 {
 
-                    command.CommandText = "Update tblPosts set LikeStatus = 1 where PostID = @PostID";
-                    command.CommandType = System.Data.CommandType.Text;
 
+                    command.CommandText = "PostLikeDisLike";
+                    command.CommandType = System.Data.CommandType.StoredProcedure;
+
+                    SqlParameter paramUserID = new SqlParameter("@UserID", ObjUser.UserID);
                     var PostIdParam = new SqlParameter("@PostID", System.Data.SqlDbType.BigInt)
                     {
                         Value = PostID
@@ -133,6 +136,7 @@ namespace BMS_API.Services
                     };
                     command.Parameters.Add(LikeStatusParam);
                     command.Parameters.Add(PostIdParam);
+                    command.Parameters.Add(paramUserID);
 
                     await _context.Database.OpenConnectionAsync();
 
@@ -210,10 +214,11 @@ namespace BMS_API.Services
                 SqlParameter paramPostDescription = new SqlParameter("@PostDescription", (object)modelActivity.PostDescription ?? DBNull.Value);
                 SqlParameter paramCreatedDate = new SqlParameter("@CreatedDate", (object)modelActivity.CreatedDate ?? DBNull.Value);
                 SqlParameter paramPostImage = new SqlParameter("@PostImage", (object)modelActivity.PostImage ?? DBNull.Value);
+                SqlParameter paramPostTitle = new SqlParameter("@PostTitile", (object)modelActivity.PostTitle ?? DBNull.Value);
 
 
-                var paramSqlQuery = "EXECUTE dbo.InsertUpdatePosts @PostID OUTPUT, @ActivityIDF, @UserIDF, @PostDescription, @CreatedDate, @PostImage";
-                await _context.Database.ExecuteSqlRawAsync(paramSqlQuery, PostID, paramActivityIDF, paramUserIDF, paramPostDescription, paramCreatedDate, paramPostImage);
+                var paramSqlQuery = "EXECUTE dbo.InsertUpdatePosts @PostID OUTPUT, @ActivityIDF, @UserIDF, @PostDescription, @CreatedDate, @PostImage,@PostTitile";
+                await _context.Database.ExecuteSqlRawAsync(paramSqlQuery, PostID, paramActivityIDF, paramUserIDF, paramPostDescription, paramCreatedDate, paramPostImage,paramPostTitle);
 
                 return Convert.ToInt64(PostID.Value);
 
@@ -239,10 +244,11 @@ namespace BMS_API.Services
                 SqlParameter paramPostDescription = new SqlParameter("@PostDescription", (object)modelActivity.PostDescription ?? DBNull.Value);
                 SqlParameter paramCreatedDate = new SqlParameter("@CreatedDate", (object)modelActivity.CreatedDate ?? DBNull.Value);
                 SqlParameter paramPostImage = new SqlParameter("@PostImage", (object)modelActivity.PostImage ?? DBNull.Value);
-                
+                SqlParameter paramPostTitle = new SqlParameter("@PostTitile", (object)modelActivity.PostTitle ?? DBNull.Value);
 
-                var paramSqlQuery = "EXECUTE dbo.InsertUpdatePosts @PostID, @ActivityIDF, @UserIDF, @PostDescription, @CreatedDate, @PostImage";
-                await _context.Database.ExecuteSqlRawAsync(paramSqlQuery, paramPostID, paramActivityIDF, paramUserIDF, paramPostDescription, paramCreatedDate, paramPostImage);
+
+                var paramSqlQuery = "EXECUTE dbo.InsertUpdatePosts @PostID, @ActivityIDF, @UserIDF, @PostDescription, @CreatedDate, @PostImage,@PostTitile";
+                await _context.Database.ExecuteSqlRawAsync(paramSqlQuery, paramPostID, paramActivityIDF, paramUserIDF, paramPostDescription, paramCreatedDate, paramPostImage,paramPostTitle);
 
                 return 0;
 
@@ -317,7 +323,7 @@ namespace BMS_API.Services
         #endregion
 
         #region Get All PostsAsync
-        public async Task<object> GetAllPostsAsync()
+        public async Task<object> GetAllPostsAsync(int page, int per_page)
         {
             try
             {
@@ -329,7 +335,9 @@ namespace BMS_API.Services
                 {
                     command.CommandText = "[GetAllPosts]";
                     command.CommandType = System.Data.CommandType.StoredProcedure;
-                    
+                    command.Parameters.Add(new SqlParameter() { ParameterName = "@UserId", SqlDbType = SqlDbType.BigInt, Value = ObjUser.UserID });
+                    command.Parameters.Add(new SqlParameter() { ParameterName = "@Page", SqlDbType = SqlDbType.Int, Value = page });
+                    command.Parameters.Add(new SqlParameter() { ParameterName = "@PerPage", SqlDbType = SqlDbType.Int, Value = per_page });
 
                     _context.Database.OpenConnection();
 
@@ -342,7 +350,12 @@ namespace BMS_API.Services
                             {
                                 PostID = (int)(reader["PostID"] != DBNull.Value ? Convert.ToInt32(reader["PostID"]) : (int?)0),
                                 LikeStatus = (int)(reader["LikeStatus"] != DBNull.Value ? Convert.ToInt32(reader["LikeStatus"]) : (int?)0),
-                                PostImage = reader["PostImage"] != DBNull.Value ? baseBannerUrl + reader["PostImage"].ToString() : string.Empty
+                                like_count = (int)(reader["like_count"] != DBNull.Value ? Convert.ToInt32(reader["like_count"]) : (long?)0),
+                                PostImage = reader["PostImage"] != DBNull.Value ? baseBannerUrl + reader["PostImage"].ToString() : string.Empty,
+                                UserProfile = reader["UserProfile"] != DBNull.Value ? baseBannerUrl + reader["UserProfile"].ToString() : string.Empty,
+                                PostDescription = reader["PostDescription"].ToString(),
+                                PostTitle = reader["PostTitle"].ToString(),
+                                FullName = reader["FullName"].ToString(),
                             };
 
                             trendingSkills.Add(trendingSkill);
